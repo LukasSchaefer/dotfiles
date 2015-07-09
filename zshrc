@@ -1,3 +1,13 @@
+# import my functions
+source ~/.functions
+
+# enable interactive mode for mv, rm, cp (asks before overwriting)
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+
+#################################################################################################################
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Lukas/.oh-my-zsh
 
