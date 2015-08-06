@@ -1,11 +1,92 @@
 # import my functions
 source ~/.functions
+source ~/scripts/streams.sh
+
+# COMPLETION SETTINGS
+# add custom completion scripts
+##fpath=(/Users/Lukas/.oh-my-zsh/completions $fpath)
+
+# compsys initialization
+##autoload -Uz compinit
+##compinit
+
+#compdef '_lollollol test1 test2 test3' lollollol
+
+# show completion menu when number of options is at least 2
+##zstyle ':completion:*' menu select=2
 
 # enable interactive mode for mv, rm, cp (asks before overwriting)
 alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# livestream linked alias
+#	Nightblue3
+alias nb3="livestream nightblue3"
+alias nightblue="livestream nightblue3"
+alias nightblue3="livestream nightblue3"
+#	RiotGames
+alias riot="livestream riotgames"
+alias riotgames="livestream riotgames"
+#	esl_summonersinn
+alias maxim="livestream esl_summonersinn"
+alias suminn="livestream esl_summonersinn"
+#	Sodapoppin
+alias soda="livestream sodapoppin"
+alias sodapoppin="livestream sodapoppin"
+#	SummonersInnLive
+alias gerlcs="livestream SummonersInnLive"
+alias summonersinnlive="livestream SummonersInnLive"
+#	esl_csgo
+alias csesl="livestream esl_csgo"
+alias eslcs="livestream esl_csgo"
+alias esl_csgo="livestream esl_csgo"
+#	esl_lol
+alias lolesl="livestream esl_lol"
+alias esl_lol="livestream esl_lol"
+alias esllol="livestream esl_lol"
+#	SirhcEz
+alias sirhcEz="livestream SirhcEz"
+alias sirhcez="livestream SirhcEz"
+#	PhreakStream
+alias phreakStream="livestream PhreakStream"
+alias phreak="livestream PhreakStream"
+#	Summit1g
+alias summit="livestream Summit1g"
+alias summit1g="livestream Summit1g"
+#	Cyanide
+alias cyanide="livestream Cyanide"
+#	FACEITTV
+alias face="livestream FACEITTV"
+alias faceit="livestream FACEITTV"
+alias faceittv="livestream FACEITTV"
+#	FragbiteLive
+alias fragbite="livestream FragbiteLive"
+alias fragbitelive="livestream FragbiteLive"
+#	Meteos
+alias meteos="livestream Meteos"
+#	TSM_Bjergsen
+alias bjerg="livestream TSM_Bjergsen"
+alias bjergsen="livestream TSM_Bjergsen"
+#	Zionspartan
+alias zion="livestream Zionspartan"
+alias zionspartan="livestream Zionspartan"
+#	Trick2g
+alias trick="livestream Trick2g"
+alias trick2g="livestream Trick2g"
+#	Kylelandrypiano
+alias kyle="livestream Kylelandrypiano"
+alias kylean="livestream Kylelandrypiano"
+alias kyleandry="livestream Kylelandrypiano"
+alias kyleandrypiano="livestream Kylelandrypiano"
+alias kylepiano="livestream Kylelandrypiano"
+
+alias spotify="spotipy-tui"
+
+alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
 #################################################################################################################
 
 # Path to your oh-my-zsh installation.
@@ -63,7 +144,7 @@ plugins=(git terminalapp brew textmate web-search sublime osx battery)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
  
 # important line for autojump plugin
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
