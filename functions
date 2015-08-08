@@ -15,7 +15,14 @@ web(){
 
 # function to start livestreamer with twitch source
 livestream(){
-	echo "starting livestreamer http://twitch.tv/$1 source in second window..."
-	 osascript -e 'tell application "Terminal" to do script "livestreamer http://twitch.tv/'$1' source"'
-	#$(livestreamer http://twitch.tv/$1 'source' '&')
+    osascript <<-EOF
+    tell application "iTerm"
+    create window with default profile
+    select first window
+    launch session "Default Session"
+        tell current session of first window
+            write text "livestreamer twitch.tv/'$1' source"
+        end tell
+    end tell
+EOF
 }
