@@ -83,6 +83,14 @@ alias kylean="livestream Kylelandrypiano"
 alias kyleandry="livestream Kylelandrypiano"
 alias kyleandrypiano="livestream Kylelandrypiano"
 alias kylepiano="livestream Kylelandrypiano"
+#	dota2ti
+alias ti="livestream dota2ti"
+alias dota2ti="livestream dota2ti"
+#	dota2ti_noob
+alias dota2noob="livestream dota2ti_noob"
+alias dota2tinoob="livestream dota2ti_noob"
+alias dota2ti_noob="livestream dota2ti_noob"
+
 
 alias spotify="spotipy-tui"
 
