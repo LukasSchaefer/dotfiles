@@ -27,6 +27,11 @@ elif [ "$1" = "other" ]
 	print "Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
 	print "Sodapoppin: soda, sodapoppin"
 
+elif [ "$1" = "dota" ]
+	then
+	print "dota2ti: ti, dota2ti"
+	print "dota2ti_noob: dota2noob, dota2tinoob, dota2ti_noob"
+
 else
 print "Riotgames: riot, Riotgames"
 print "SummonersInnLive: gerlcs, summonersinnlive"
@@ -46,6 +51,8 @@ print "FACEITTV: face, faceit, faceittv"
 print "Summit1g: summit, summit1g"
 print "Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
 print "Sodapoppin: soda, sodapoppin"
+print "dota2ti: ti, dota2ti"
+print "dota2ti_noob: dota2noob, dota2tinoob, dota2ti_noob"
 fi
 
 read WISH
