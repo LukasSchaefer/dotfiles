@@ -52,7 +52,7 @@ print "Summit1g: summit, summit1g"
 print "Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
 print "Sodapoppin: soda, sodapoppin"
 print "dota2ti: ti, dota2ti"
-print "dota2ti_noob: dota2noob, dota2tinoob, dota2ti_noob"
+print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
 fi
 
 read WISH
