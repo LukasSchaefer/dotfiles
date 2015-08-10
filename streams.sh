@@ -26,11 +26,13 @@ elif [ "$1" = "other" ]
 	then
 	print "Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
 	print "Sodapoppin: soda, sodapoppin"
+	print "GamesDoneQuick: gdq, gamesdonequick"
+	print "Pewdiepie: pew, pewdiepie"
 
 elif [ "$1" = "dota" ]
 	then
 	print "dota2ti: ti, dota2ti"
-	print "dota2ti_noob: dota2noob, dota2tinoob, dota2ti_noob"
+	print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
 
 else
 print "Riotgames: riot, Riotgames"
@@ -51,12 +53,19 @@ print "FACEITTV: face, faceit, faceittv"
 print "Summit1g: summit, summit1g"
 print "Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
 print "Sodapoppin: soda, sodapoppin"
+print "GamesDoneQuick: gdq, gamesdonequick"
+print "Pewdiepie: pew, pewdiepie"
 print "dota2ti: ti, dota2ti"
 print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
 fi
 
 read WISH
-if [ $WISH = "riot" ] 
+
+if [ $WISH = "quit" ]
+	then
+	return
+
+elif [ $WISH = "riot" ] 
 	then
 	livestream Riotgames
 	return
@@ -261,7 +270,7 @@ elif [ $WISH = "sodapoppin" ]
 	livestream Sodapoppin
 	return
 
-else echo "Wrong shortcut! Check with the output above."
+else echo "Wrong shortcut! Compare with the output above."
 	return
 
 fi 
