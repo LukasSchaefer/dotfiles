@@ -1,6 +1,7 @@
 # import my functions
 source ~/.functions
 source ~/scripts/streams.sh
+source ~/scripts/selectstreams.sh
 
 # COMPLETION SETTINGS
 # add custom completion scripts
@@ -99,6 +100,8 @@ alias gamesdonequick="livestream GamesDoneQuick"
 
 
 alias spotify="spotipy-tui"
+
+alias stream="selectstreams"
 
 alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
 #################################################################################################################
