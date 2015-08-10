@@ -90,6 +90,12 @@ alias dota2ti="livestream dota2ti"
 alias dota2newcomer="livestream dota2ti_newcomer"
 alias dota2tinewcomer="livestream dota2ti_newcomer"
 alias dota2ti_newcomer="livestream dota2ti_newcomer"
+#	Pewdiepie
+alias pew="livestream Pewdiepie"
+alias pewdiepie="livestream Pewdiepie"
+#	GamesDoneQuick
+alias gdq="livestream GamesDoneQuick"
+alias gamesdonequick="livestream GamesDoneQuick"
 
 
 alias spotify="spotipy-tui"
