@@ -1,11 +1,23 @@
 #!/bin/zsh
 
 source ~/dotfiles/functions
+
+# Script to start various twitch streams with the help of livestream and a select/case implementation
+# while listing the alias for all the streams 
+
 selectstreams(){
+
+# First we can select different groups of streams divided into games finished off by the option to
+# show all streams or alternatively quit the script
 
 select STREAM in quit lol dota cs other all
 do
-	case "$STREAM" in
+	# now the different cases with the categories from above are executed. While quit is fairly simple
+	# the other cases first print the multiple streams of this category (or all in the case of the all
+	# option) with its alias and then they give the option to start the streams with the help of
+	# another case function again with the option to quit.
+
+	case "$STREAM" in 
 		
 		quit)
 			return
@@ -255,6 +267,7 @@ do
 				
 			;;
 
+		# Short error message in case of an invalid argument
 		*)
 			echo "invalid argument!"
 			return

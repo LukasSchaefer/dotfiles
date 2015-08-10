@@ -1,5 +1,9 @@
 #!/bin/zsh
+
+# Script to print all the alias' of various created livestream streams divided into multiple 
+# categories with the option to start the wished stream afterwards.
 streams(){
+
 if [ "$1" = "lol" ]
 	then 
 	print "Riotgames: riot, Riotgames"
@@ -35,28 +39,28 @@ elif [ "$1" = "dota" ]
 	print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
 
 else
-print "Riotgames: riot, Riotgames"
-print "SummonersInnLive: gerlcs, summonersinnlive"
-print "esl_summonersinn: maxim"
-print "esl_lol: esllol, lolesl, esl_lol"
-print "Nightblue3: nb3, nightblue, nightblue3"
-print "SirhcEz: sirhcez, SirhcEz"
-print "PhreakStream: phreakstream, phreak"
-print "Cyanide: cyanide"
-print "Trick2g: trick, trick2g"
-print "Meteos: meteos"
-print "TSM_Bjergsen: bjerg, bjergsen"
-print "Zionspartan: zion, zionspartan" 
-print "esl_csgo: csesl, eslcs, esl_csgo"
-print "FragbiteLive: fragbite, fragbitelive"
-print "FACEITTV: face, faceit, faceittv"
-print "Summit1g: summit, summit1g"
-print "Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
-print "Sodapoppin: soda, sodapoppin"
-print "GamesDoneQuick: gdq, gamesdonequick"
-print "Pewdiepie: pew, pewdiepie"
-print "dota2ti: ti, dota2ti"
-print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
+	print "Riotgames: riot, Riotgames"
+	print "SummonersInnLive: gerlcs, summonersinnlive"
+	print "esl_summonersinn: maxim"
+	print "esl_lol: esllol, lolesl, esl_lol"
+	print "Nightblue3: nb3, nightblue, nightblue3"
+	print "SirhcEz: sirhcez, SirhcEz"
+	print "PhreakStream: phreakstream, phreak"
+	print "Cyanide: cyanide"
+	print "Trick2g: trick, trick2g"
+	print "Meteos: meteos"
+	print "TSM_Bjergsen: bjerg, bjergsen"
+	print "Zionspartan: zion, zionspartan" 
+	print "esl_csgo: csesl, eslcs, esl_csgo"
+	print "FragbiteLive: fragbite, fragbitelive"
+	print "FACEITTV: face, faceit, faceittv"
+	print "Summit1g: summit, summit1g"
+	print "Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
+	print "Sodapoppin: soda, sodapoppin"
+	print "GamesDoneQuick: gdq, gamesdonequick"
+	print "Pewdiepie: pew, pewdiepie"
+	print "dota2ti: ti, dota2ti"
+	print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
 fi
 
 read WISH
