@@ -79,6 +79,9 @@ do
 				12) livestream Zionspartan
 					return
 					;;
+				*) echo "invalid argument!"
+				   return
+				   ;;
 
 			esac
 
@@ -100,6 +103,9 @@ do
 				2) livestream dota2ti_newcomer
 					return
 					;;
+				*) echo "invalid argument!"
+				   return
+				   ;;
 
 			esac
 
@@ -129,6 +135,9 @@ do
 				4) livestream Summit1g
 					return
 					;;
+				*) echo "invalid argument!"
+				   return
+				   ;;
 
 			esac
 
@@ -158,6 +167,9 @@ do
 				4) livestream Pewdiepie
 					return
 					;;
+				*) echo "invalid argument!"
+				   return
+				   ;;
 
 			esac
 
@@ -262,6 +274,9 @@ do
 				22) livestream Pewdiepie
 					return
 					;;
+				*) echo "invalid argument!"
+				   return
+				   ;;
 
 			esac
 				
