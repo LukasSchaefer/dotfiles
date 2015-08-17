@@ -105,7 +105,10 @@ alias spotify="spotipy-tui"
 
 alias stream="selectstreams"
 
+#	default SublimeText3 project Workspace
 alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
+
+alias math="python3 ~/Python/math.py"
 #################################################################################################################
 
 # Path to your oh-my-zsh installation.
