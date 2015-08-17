@@ -2,9 +2,11 @@
 source ~/.functions
 source ~/scripts/streams.sh
 source ~/scripts/selectstreams.sh
+source ~/scripts/math.sh
+source ~/scripts/isnumber.sh
 
 # COMPLETION SETTINGS
-# add custom completion scripts
+# add custom completion script	
 ##fpath=(/Users/Lukas/.oh-my-zsh/completions $fpath)
 
 # compsys initialization
@@ -194,3 +196,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
