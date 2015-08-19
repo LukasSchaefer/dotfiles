@@ -2,7 +2,6 @@
 source ~/.functions
 source ~/scripts/streams.sh
 source ~/scripts/selectstreams.sh
-source ~/scripts/math.sh
 source ~/scripts/isnumber.sh
 
 # COMPLETION SETTINGS
@@ -108,7 +107,7 @@ alias stream="selectstreams"
 #	default SublimeText3 project Workspace
 alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
 
-alias math="python3 ~/Python/math.py"
+alias math="python3 ~/python/math.py"
 #################################################################################################################
 
 # Path to your oh-my-zsh installation.
