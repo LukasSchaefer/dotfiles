@@ -5,7 +5,7 @@ source ~/scripts/selectstreams.sh
 source ~/scripts/isnumber.sh
 
 # COMPLETION SETTINGS
-# add custom completion script	
+# add custom completion script
 ##fpath=(/Users/Lukas/.oh-my-zsh/completions $fpath)
 
 # compsys initialization
@@ -99,6 +99,7 @@ alias pewdiepie="livestream Pewdiepie"
 alias gdq="livestream GamesDoneQuick"
 alias gamesdonequick="livestream GamesDoneQuick"
 
+alias vlc="open -a vlc"
 
 alias spotify="spotipy-tui"
 
@@ -108,6 +109,8 @@ alias stream="selectstreams"
 alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
 
 alias math="python3 ~/python/math.py"
+alias isprime="python3 ~/python/isprime.py"
+
 #################################################################################################################
 
 # Path to your oh-my-zsh installation.
@@ -166,7 +169,7 @@ plugins=(git terminalapp brew textmate web-search sublime osx battery)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
- 
+
 # important line for autojump plugin
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
