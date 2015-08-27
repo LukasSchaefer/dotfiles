@@ -99,7 +99,9 @@ alias pewdiepie="livestream Pewdiepie"
 alias gdq="livestream GamesDoneQuick"
 alias gamesdonequick="livestream GamesDoneQuick"
 
+# alias for applications
 alias vlc="open -a vlc"
+alias vox="open -a vox"
 
 alias spotify="spotipy-tui"
 
