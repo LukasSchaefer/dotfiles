@@ -3,6 +3,7 @@ source ~/.functions
 source ~/scripts/streams.sh
 source ~/scripts/selectstreams.sh
 source ~/scripts/isnumber.sh
+source ~/scripts/remind.sh
 
 # COMPLETION SETTINGS
 # add custom completion script
