@@ -111,9 +111,12 @@ alias stream="selectstreams"
 #	default SublimeText3 project Workspace
 alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
 
+# own python math function
 alias math="python3 ~/python/math.py"
 alias isprime="python3 ~/python/isprime.py"
 
+# own python photofilter
+alias photofilter="python3 ~/python/photofilter.py"
 #################################################################################################################
 
 # Path to your oh-my-zsh installation.
