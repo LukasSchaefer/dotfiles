@@ -17,6 +17,7 @@ Bundle 'klen/python-mode'
 filetype plugin indent on
 
 " The rest of your config follows here
+set backspace=2
 set encoding=utf8
 syntax enable
 set mouse=a
