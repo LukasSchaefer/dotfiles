@@ -5,19 +5,6 @@ source ~/scripts/selectstreams.sh
 source ~/scripts/isnumber.sh
 source ~/scripts/remind.sh
 
-# COMPLETION SETTINGS
-# add custom completion script
-##fpath=(/Users/Lukas/.oh-my-zsh/completions $fpath)
-
-# compsys initialization
-##autoload -Uz compinit
-##compinit
-
-#compdef '_lollollol test1 test2 test3' lollollol
-
-# show completion menu when number of options is at least 2
-##zstyle ':completion:*' menu select=2
-
 # enable interactive mode for mv, rm, cp (asks before overwriting)
 alias rm="rm -i"
 alias cp="cp -i"
@@ -174,7 +161,10 @@ plugins=(git terminalapp brew textmate web-search sublime osx battery)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=/usr/local/texlive/2015/bin/universal-darwin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export MANPATH=$MANPATH:/usr/local/texlive/2015/texmf-dist/doc/man
+export INFOPATH=$INFOPATH:/usr/local/texlive/2015/texmf-dist/doc/info
+
 
 # important line for autojump plugin
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh

@@ -1,5 +1,21 @@
 set nocompatible
-filetype off
+set relativenumber
+
+" Settings for Latex-Suite
+filetype plugin on
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" This enables automatic indentation as you type.
+filetype indent on
+
+" Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -42,6 +58,8 @@ augroup vimrc_autocmds
 
 " airline setup
 set laststatus=2
+" fancy powerline fonts
+let g:airline_powerline_fonts = 1
 
 " Nerdtree setup
 map <F2> :NERDTreeToggle<CR>
@@ -90,16 +108,3 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
-
-" Settings for Latex-Suite
-filetype plugin on
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-" This enables automatic indentation as you type.
-filetype indent on
-" Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
