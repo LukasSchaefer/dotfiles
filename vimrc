@@ -1,16 +1,8 @@
 set nocompatible
-set relativenumber
+filetype off
 
 " Settings for Latex-Suite
 filetype plugin on
-
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-
-" This enables automatic indentation as you type.
-filetype indent on
 
 " Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
@@ -25,26 +17,99 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
-Plugin 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
+Bundle 'christoomey/vim-sort-motion'
 Bundle 'klen/python-mode'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'christoomey/vim-system-copy'
+Bundle 'kana/vim-textobj-user'
+Bundle 'bps/vim-textobj-python'
+Bundle 'rbonvall/vim-textobj-latex'
+Bundle 'kana/vim-textobj-entire'
 
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 filetype plugin indent on
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
+" _______________________________________________________________________
 " The rest of your config follows here
+
+" make backspace work like most other apps
 set backspace=2
+
+"shows horizontal and vertical line where the cursor is in the file
+set cursorline cursorcolumn
+
+"linebreaks after long line are indented correctly
+set wrap
+set breakindent
+
+"sets character encoding
 set encoding=utf8
-syntax enable
-set mouse=a
-set t_Co=256
-set nobackup
+
+" set linenumbers
+set relativenumber
 set number
+
+"show syntax colors
+syntax enable
+
+"enable filetype detection
+filetype on
+filetype plugin on
+filetype indent on
+
+"enable mouse usage in GUI
+if has("gui_running")
+    set mouse=a
+    else
+        set mouse=
+        endif
+
+set t_Co=256
+
+" disable creating of all sort of swapfiles
+set nobackup
 set nowb
 set noswapfile
-filetype indent on
+
+" This enables automatic indentation as you type.
 set tabstop=4
+
+" i want to see at least x lines above/below the cursor
+set scrolloff=10
+
+set history=999
+set hlsearch
+set showmatch
+
+"shows number of columns and lines in powerbar
 set ruler
+
+
+"sets width for shifting with >> or << and tablength and converts tab to
+"spaces
+set shiftwidth=4
+set tabstop=4
+set expandtab
+
+" __________________________________________________________________________
 autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
 augroup vimrc_autocmds
@@ -56,12 +121,22 @@ augroup vimrc_autocmds
 				"             autocmd FileType python set nowrap
 				"                 augroup END
 
-" airline setup
-set laststatus=2
-" fancy powerline fonts
-let g:airline_powerline_fonts = 1
 
-" Nerdtree setup
+"=> Airline setup 
+" """"""""""""""""""""""""""""""
+" " Always show the status line
+set laststatus=2
+" "let g:airline#extensions#tabline#enabled = 1
+" fancy powerline fonts
+" "let g:airline_powerline_fonts = 1
+" "let g:airline_left_sep = ''
+" "let g:airline_right_sep = ''
+" "disableing showing of trailing in current file
+" "let g:airline#extensions#whitespace#show_message = 0
+
+" => NERDTree setup
+"""""""""""""""""""""""""""""
+" toggle NerdTree
 map <F2> :NERDTreeToggle<CR>
 
 " Python-mode
@@ -108,3 +183,15 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
+
+" Latex Suite setup:
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+ filetype indent on
