@@ -13,6 +13,10 @@ alias mv="mv -i"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+# Folder alias
+alias cheat="cd ~/github/cheatsheets"
+alias cheatsheets="cd ~/github/cheatsheets"
+
 # livestream linked alias
 #	Nightblue3
 alias nb3="livestream nightblue3"
