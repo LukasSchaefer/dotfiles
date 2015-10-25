@@ -17,6 +17,13 @@ alias reload="exec $SHELL -l"
 alias cheat="cd ~/github/cheatsheets"
 alias cheatsheets="cd ~/github/cheatsheets"
 
+# University-Folder alias
+alias prog="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
+alias prog1="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
+alias mfi="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
+alias mathe="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
+alias mathe1="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
+
 # livestream linked alias
 #	Nightblue3
 alias nb3="livestream nightblue3"
@@ -165,7 +172,7 @@ plugins=(git terminalapp brew textmate web-search sublime osx battery)
 
 # User configuration
 
-export PATH=/usr/local/texlive/2015/bin/universal-darwin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/texlive/2015/bin/universal-darwin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Cellar/smlnj/110.78/bin
 export MANPATH=$MANPATH:/usr/local/texlive/2015/texmf-dist/doc/man
 export INFOPATH=$INFOPATH:/usr/local/texlive/2015/texmf-dist/doc/info
 
