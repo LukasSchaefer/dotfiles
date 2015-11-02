@@ -23,6 +23,7 @@ alias prog1="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
 alias mfi="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
 alias mathe="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
 alias mathe1="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
+alias psycho="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach"
 
 # livestream linked alias
 #	Nightblue3

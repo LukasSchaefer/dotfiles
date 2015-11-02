@@ -30,6 +30,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'bps/vim-textobj-python'
 Bundle 'rbonvall/vim-textobj-latex'
 Bundle 'kana/vim-textobj-entire'
+Bundle 'cypok/vim-sml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,7 +68,7 @@ set encoding=utf8
 set relativenumber
 set number
 
-"show syntax colors
+"show syntax
 syntax enable
 
 "enable filetype detection
@@ -128,7 +129,7 @@ augroup vimrc_autocmds
 set laststatus=2
 " "let g:airline#extensions#tabline#enabled = 1
 " fancy powerline fonts
-" "let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
 " "let g:airline_left_sep = ''
 " "let g:airline_right_sep = ''
 " "disableing showing of trailing in current file
@@ -195,3 +196,22 @@ set grepprg=grep\ -nH\ $*
 
 " OPTIONAL: This enables automatic indentation as you type.
  filetype indent on
+ 
+" Latex Suite settings:
+augroup MyIMAPs
+        au!
+        au VimEnter * call IMAP('(', '(<++>)<++>', 'tex')
+        au VimEnter * call IMAP('{', '{<++>}<++>', 'tex')
+        au VimEnter * call IMAP('\{', '\{<++>\}<++>', 'tex')
+        au VimEnter * call IMAP('[', '[<++>]<++>', 'tex')
+        au VimEnter * call IMAP('$', '$<++>$<++>', 'tex')
+        au VimEnter * call IMAP('\s ', '\section{<++>}<++>', 'tex')
+        au VimEnter * call IMAP('\ss ', '\subsection{<++>}<++>', 'tex')
+        au VimEnter * call IMAP('\enumerate ', '\begin{enumerate}<++>', 'tex')
+        au VimEnter * call IMAP ('\itemize ', '\begin{itemize}<++>','tex')
+        au VimEnter * call IMAP('\bf ','\textbf{<++>}<++>','tex')
+augroup END
+
+let g:Tex_CompileRule_pdf = 'latexmk -pdf'
+
+ colorscheme material 
