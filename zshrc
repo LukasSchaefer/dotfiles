@@ -71,6 +71,9 @@ alias fragbite="livestream FragbiteLive"
 alias fragbitelive="livestream FragbiteLive"
 #	Meteos
 alias meteos="livestream Meteos"
+#   Sneaky
+alias sneaky="livestream c9sneaky"
+alias c9sneaky="livestream c9sneaky"
 #	TSM_Bjergsen
 alias bjerg="livestream TSM_Bjergsen"
 alias bjergsen="livestream TSM_Bjergsen"
