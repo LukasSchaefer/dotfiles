@@ -13,6 +13,10 @@ alias mv="mv -i"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+#   load terminal-notifier with reattach-to-user-namespace (necessary to work in Tmux)
+alias terminal-notifier="reattach-to-user-namespace terminal-notifier"
+alias termnot="reattach-to-user-namespace terminal-notifier"
+
 # Folder alias
 alias cheat="cd ~/github/cheatsheets"
 alias cheatsheets="cd ~/github/cheatsheets"
