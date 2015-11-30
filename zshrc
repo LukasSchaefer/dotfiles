@@ -39,13 +39,13 @@ alias nightblue3="livestream nightblue3"
 alias riot="livestream riotgames"
 alias riotgames="livestream riotgames"
 #	esl_summonersinn
-alias maxim="livestream esl_summonersinn"
+alias maxim="livestream SummonersInnLive"
 alias suminn="livestream esl_summonersinn"
 #	Sodapoppin
 alias soda="livestream sodapoppin"
 alias sodapoppin="livestream sodapoppin"
 #	SummonersInnLive
-alias gerlcs="livestream SummonersInnLive"
+alias gerlcs="livestream esl_summonersinn"
 alias summonersinnlive="livestream SummonersInnLive"
 #	esl_csgo
 alias csesl="livestream esl_csgo"
