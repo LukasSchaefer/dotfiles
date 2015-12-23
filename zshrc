@@ -35,6 +35,8 @@ alias pdi="cd ~/Documents/Universität/1.\ Semester/Perspektiven\ der\ Informati
 alias nb3="livestream nightblue3"
 alias nightblue="livestream nightblue3"
 alias nightblue3="livestream nightblue3"
+#   Imaqtpie
+alias qtpie="livestream imaqtpie"
 #	RiotGames
 alias riot="livestream riotgames"
 alias riotgames="livestream riotgames"
@@ -114,6 +116,9 @@ alias vox="open -a vox"
 alias spotify="spotipy-tui"
 
 alias stream="selectstreams"
+
+#   index.html editing with macvim
+alias editindex="mvim ~/Downloads/index.html"
 
 #	default SublimeText3 project Workspace
 alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
