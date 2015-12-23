@@ -117,6 +117,9 @@ alias spotify="spotipy-tui"
 
 alias stream="selectstreams"
 
+#   mywebsite folder alias
+alias mywebsite="cd ~/Documents/mywebsite"
+
 #   index.html editing with macvim
 alias editindex="mvim ~/Downloads/index.html"
 
