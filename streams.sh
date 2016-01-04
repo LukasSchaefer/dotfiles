@@ -10,12 +10,15 @@ if [ "$1" = "lol" ]
 	print "SummonersInnLive: gerlcs, summonersinnlive"
 	print "esl_summonersinn: maxim, suminn"
 	print "esl_lol: esllol, lolesl, esl_lol"
+    print "kev1ntv: kevin"
 	print "Nightblue3: nb3, nightblue, nightblue3"
+    print "imaqtpie: qtpie"
+    print "C9Sneaky: sneaky, c9sneaky"
+	print "Meteos: meteos"
 	print "SirhcEz: sirhcez, sirhcEz"
 	print "PhreakStream: phreakstream, phreak"
 	print "Cyanide: cyanide"
 	print "Trick2g: trick, trick2g"
-	print "Meteos: meteos"
 	print "TSM_Bjergsen: bjerg, bjergsen"
 	print "Zionspartan: zion, zionspartan"
 
@@ -41,16 +44,19 @@ elif [ "$1" = "dota" ]
 else
 	print "Riotgames: riot, Riotgames"
 	print "SummonersInnLive: gerlcs, summonersinnlive"
-	print "esl_summonersinn: maxim"
+	print "esl_summonersinn: maxim, suminn"
 	print "esl_lol: esllol, lolesl, esl_lol"
+    print "kev1ntv: kevin"
 	print "Nightblue3: nb3, nightblue, nightblue3"
-	print "SirhcEz: sirhcez, SirhcEz"
+    print "imaqtpie: qtpie"
+    print "C9Sneaky: sneaky, c9sneaky"
+	print "Meteos: meteos"
+	print "SirhcEz: sirhcez, sirhcEz"
 	print "PhreakStream: phreakstream, phreak"
 	print "Cyanide: cyanide"
 	print "Trick2g: trick, trick2g"
-	print "Meteos: meteos"
 	print "TSM_Bjergsen: bjerg, bjergsen"
-	print "Zionspartan: zion, zionspartan" 
+	print "Zionspartan: zion, zionspartan"
 	print "esl_csgo: csesl, eslcs, esl_csgo"
 	print "FragbiteLive: fragbite, fragbitelive"
 	print "FACEITTV: face, faceit, faceittv"
@@ -94,6 +100,11 @@ elif [ $WISH = "maxim" ]
 	livestream esl_summonersinn
 	return
 
+elif [ $WISH = "kevin" ]
+    then
+    livestream kev1ntv
+    return
+
 elif [ $WISH = "esllol" ]
 	then
 	livestream esl_lol
@@ -123,6 +134,11 @@ elif [ $WISH = "nightblue3" ]
 	then
 	livestream Nightblue3
 	return
+
+elif [ $WISH = "qtpie" ]
+    then
+    livestream imaqtpie
+    return
 
 elif [ $WISH = "sirhcez" ]
 	then
@@ -168,6 +184,16 @@ elif [ $WISH = "meteos" ]
 	then
 	livestream Meteos 
 	return
+
+elif [ $WISH = "sneaky" ]
+    then
+    livestream c9sneaky
+    return
+
+elif [ $WISH = "c9sneaky" ]
+    then
+    livestream c9sneaky
+    return
 
 elif [ $WISH = "bjergsen" ]
 	then
