@@ -31,6 +31,7 @@ Bundle 'bps/vim-textobj-python'
 Bundle 'rbonvall/vim-textobj-latex'
 Bundle 'kana/vim-textobj-entire'
 Bundle 'cypok/vim-sml'
+Bundle 'rstacruz/sparkup'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -4,6 +4,7 @@ source ~/scripts/streams.sh
 source ~/scripts/selectstreams.sh
 source ~/scripts/isnumber.sh
 source ~/scripts/remind.sh
+source ~/scripts/octavepwd.sh
 
 # enable interactive mode for mv, rm, cp (asks before overwriting)
 alias rm="rm -i"
@@ -86,6 +87,8 @@ alias bjergsen="livestream TSM_Bjergsen"
 #	Zionspartan
 alias zion="livestream Zionspartan"
 alias zionspartan="livestream Zionspartan"
+#	Kev1ntv
+alias kevin="livestream kev1ntv"
 #	Trick2g
 alias trick="livestream Trick2g"
 alias trick2g="livestream Trick2g"
@@ -117,8 +120,16 @@ alias spotify="spotipy-tui"
 
 alias stream="selectstreams"
 
+alias oct="octavepwd"
+
+#   cheatsheets folder alias
+alias cheatsheets="cd ~/github/cheatsheets"
+
 #   mywebsite folder alias
 alias mywebsite="cd ~/Documents/mywebsite"
+
+#   rm old index.html (for new one not be named index(1).html
+alias rmindex="rm ~/Downloads/index*"
 
 #   index.html editing with macvim
 alias editindex="mvim ~/Downloads/index.html"
