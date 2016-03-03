@@ -103,6 +103,7 @@ do
 			print "0) quit"
 			print "1) dota2ti: ti, dota2ti"
 			print "2) dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
+            print "3) dotamajor: dotamajor"
 
 			read WISH
 
@@ -115,6 +116,9 @@ do
 				2) livestream dota2ti_newcomer
 					return
 					;;
+                3) livestream dotamajor
+                    return
+                    ;;
 				*) echo "invalid argument!"
 				   return
 				   ;;
@@ -208,14 +212,15 @@ do
 			print "15) Zionspartan: zion, zionspartan"
 			print "16) dota2ti: ti, dota2ti"
 			print "17) dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
-			print "18) esl_csgo: csesl, eslcs, esl_csgo"
-			print "19) FragbiteLive: fragbite, fragbitelive"
-			print "20) FACEITTV: face, faceit, faceittv"
-			print "21) Summit1g: summit, summit1g"
-			print "22) Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
-			print "23) Sodapoppin: soda, sodapoppin"
-			print "24) GamesDoneQuick: gdq, gamesdonequick"
-			print "25) Pewdiepie: pew, pewdiepie"
+            print "18) dotamajor: dotamajor"
+			print "19) esl_csgo: csesl, eslcs, esl_csgo"
+			print "20) FragbiteLive: fragbite, fragbitelive"
+			print "21) FACEITTV: face, faceit, faceittv"
+			print "22) Summit1g: summit, summit1g"
+			print "23) Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
+			print "24) Sodapoppin: soda, sodapoppin"
+			print "25) GamesDoneQuick: gdq, gamesdonequick"
+			print "26) Pewdiepie: pew, pewdiepie"
 			
 
 			read WISH
@@ -274,28 +279,31 @@ do
 				17) livestream dota2ti_newcomer
 					return
 					;;
-				18) livestream esl_csgo
+                18) livestream dotamajor
+                    return
+                    ;;
+				19) livestream esl_csgo
 					return
 					;;
-				19) livestream FragbiteLive
+				20) livestream FragbiteLive
 					return
 					;;
-				20) livestream FACEITTV
+				21) livestream FACEITTV
 					return
 					;;
-				21) livestream Summit1g
+				22) livestream Summit1g
 					return
 					;;
-				22) livestream Kyleandrypiano
+				23) livestream Kyleandrypiano
 					return
 					;;
-				23) livestream Sodapoppin
+				24) livestream Sodapoppin
 					return
 					;;
-				24) livestream GamesDoneQuick
+				25) livestream GamesDoneQuick
 					return
 					;;
-				25) livestream Pewdiepie
+				26) livestream Pewdiepie
 					return
 					;;
 				*) echo "invalid argument!"

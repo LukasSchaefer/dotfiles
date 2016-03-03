@@ -40,6 +40,7 @@ elif [ "$1" = "dota" ]
 	then
 	print "dota2ti: ti, dota2ti"
 	print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
+    print "dotamajor: dotamajor"
 
 else
 	print "Riotgames: riot, Riotgames"
@@ -67,6 +68,7 @@ else
 	print "Pewdiepie: pew, pewdiepie"
 	print "dota2ti: ti, dota2ti"
 	print "dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
+    print "dotamajor: dotamajor"
 fi
 
 read WISH
@@ -299,6 +301,56 @@ elif [ $WISH = "sodapoppin" ]
 	then
 	livestream Sodapoppin
 	return
+
+elif [ $WISH = "gdq" ]
+    then
+    livestream GamesDoneqQuick
+    return
+
+elif [ $WISH = "gamesdonequick" ]
+    then
+    livestream GamesDoneQuick
+    return
+
+elif [ $WISH = "pew" ]
+    then
+    livestream Pewdiepie
+    return
+
+elif [ $WISH = "pewdiepie" ]
+    then
+    livestream Pewdiepie
+    return     
+
+elif [ $WISH = "ti" ]
+    then
+    livestream dota2ti
+    return
+
+elif [ $WISH = "dota2ti" ]
+    then
+    livestream dota2ti
+    return
+
+elif [ $WISH = "dota2newcomer" ]
+    then
+    livestream dota2ti_newcomer
+    return
+
+elif [ $WISH = "dota2tinewcomer" ]
+    then
+    livestream dota2ti_newcomer
+    return
+
+elif [ $WISH = "dota2ti_newcomer" ]
+    then
+    livestream dota2ti_newcomer
+    return
+
+elif [ $WISH = "dotamajor" ]
+    then
+    livestream dotamajor
+    return
 
 else echo "Wrong shortcut! Compare with the output above."
 	return
