@@ -22,6 +22,9 @@ alias termnot="reattach-to-user-namespace terminal-notifier"
 alias cheat="cd ~/github/cheatsheets"
 alias cheatsheets="cd ~/github/cheatsheets"
 
+# airport alias
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+
 # University-Folder alias
 alias prog="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
 alias prog1="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
@@ -105,6 +108,8 @@ alias dota2ti="livestream dota2ti"
 alias dota2newcomer="livestream dota2ti_newcomer"
 alias dota2tinewcomer="livestream dota2ti_newcomer"
 alias dota2ti_newcomer="livestream dota2ti_newcomer"
+#   dotamajor
+alias dotamajor="livestream dotamajor"
 #	Pewdiepie
 alias pew="livestream Pewdiepie"
 alias pewdiepie="livestream Pewdiepie"
