@@ -11,6 +11,7 @@ if [ "$1" = "lol" ]
 	print "esl_summonersinn: maxim, suminn"
 	print "esl_lol: esllol, lolesl, esl_lol"
     print "kev1ntv: kevin"
+    print "HandofBlood: hob, HandofBlood"
 	print "Nightblue3: nb3, nightblue, nightblue3"
     print "imaqtpie: qtpie"
     print "C9Sneaky: sneaky, c9sneaky"
@@ -48,6 +49,7 @@ else
 	print "esl_summonersinn: maxim, suminn"
 	print "esl_lol: esllol, lolesl, esl_lol"
     print "kev1ntv: kevin"
+    print "HandofBlood: hob, HandofBlood"
 	print "Nightblue3: nb3, nightblue, nightblue3"
     print "imaqtpie: qtpie"
     print "C9Sneaky: sneaky, c9sneaky"
@@ -105,6 +107,16 @@ elif [ $WISH = "maxim" ]
 elif [ $WISH = "kevin" ]
     then
     livestream kev1ntv
+    return
+
+elif [ $WISH = "hob" ]
+    then
+    livestream HandIOfIBlood
+    return
+
+elif [ $WISH = "HandofBlood" ]
+    then
+    livestream HandIOfIBlood
     return
 
 elif [ $WISH = "esllol" ]

@@ -29,17 +29,18 @@ do
 			print "2) SummonersInnLive: gerlcs, summonersinnlive"
 			print "3) esl_summonersinn: maxim, suminn"
             print "4) kev1ntv: kevin"
-			print "5) esl_lol: esllol, lolesl, esl_lol"
-			print "6) Nightblue3: nb3, nightblue, nightblue3"
-            print "7) imaqtpie: qtpie"
-			print "8) SirhcEz: sirhcez, sirhcEz"
-			print "9) PhreakStream: phreakstream, phreak"
-			print "10) Cyanide: cyanide"
-			print "11) Trick2g: trick, trick2g"
-            print "12) C9Sneaky: c9sneaky, sneaky"
-			print "13) Meteos: meteos"
-			print "14) TSM_Bjergsen: bjerg, bjergsen"
-			print "15) Zionspartan: zion, zionspartan"
+            print "5) HandofBlood: hob, HandofBlood"
+			print "6) esl_lol: esllol, lolesl, esl_lol"
+			print "7) Nightblue3: nb3, nightblue, nightblue3"
+            print "8) imaqtpie: qtpie"
+			print "9) SirhcEz: sirhcez, sirhcEz"
+			print "10) PhreakStream: phreakstream, phreak"
+			print "11) Cyanide: cyanide"
+			print "12) Trick2g: trick, trick2g"
+            print "13) C9Sneaky: c9sneaky, sneaky"
+			print "14) Meteos: meteos"
+			print "15) TSM_Bjergsen: bjerg, bjergsen"
+			print "16) Zionspartan: zion, zionspartan"
 			
 			read WISH			
 
@@ -58,37 +59,40 @@ do
                 4) livestream kev1ntv
                     return
                     ;;
-				5) livestream esl_lol
-					return
-					;;
-				6) livestream Nightblue3
-					return
-					;;
-                7) livestream imaqtpie
+                5) livestream HandIOfIBlood
                     return
                     ;;
-				8) livestream SirhcEz
+				6) livestream esl_lol
 					return
 					;;
-				9) livestream PhreakStream
-					return	
-					;;
-				10) livestream Cyanide
-					return	
-					;;
-				11) livestream Trick2g
+				7) livestream Nightblue3
 					return
 					;;
-                12) livestream c9sneaky
+                8) livestream imaqtpie
                     return
                     ;;
-				13) livestream Meteos
+				9) livestream SirhcEz
 					return
 					;;
-				14) livestream TSM_Bjergsen
+				10) livestream PhreakStream
+					return	
+					;;
+				11) livestream Cyanide
+					return	
+					;;
+				12) livestream Trick2g
 					return
 					;;
-				15) livestream Zionspartan
+                13) livestream c9sneaky
+                    return
+                    ;;
+				14) livestream Meteos
+					return
+					;;
+				15) livestream TSM_Bjergsen
+					return
+					;;
+				16) livestream Zionspartan
 					return
 					;;
 				*) echo "invalid argument!"
@@ -199,28 +203,29 @@ do
 			print "2) SummonersInnLive: gerlcs, summonersinnlive"
 			print "3) esl_summonersinn: maxim, suminn"
             print "4) kev1ntv: kevin"
-			print "5) esl_lol: esllol, lolesl, esl_lol"
-			print "6) Nightblue3: nb3, nightblue, nightblue3"
-            print "7) imaqtpie: qtpie"
-			print "8) SirhcEz: sirhcez, sirhcEz"
-			print "9) PhreakStream: phreakstream, phreak"
-			print "10) Cyanide: cyanide"
-			print "11) Trick2g: trick, trick2g"
-            print "12) C9Sneaky: c9sneaky, sneaky"
-			print "13) Meteos: meteos"
-			print "14) TSM_Bjergsen: bjerg, bjergsen"
-			print "15) Zionspartan: zion, zionspartan"
-			print "16) dota2ti: ti, dota2ti"
-			print "17) dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
-            print "18) dotamajor: dotamajor"
-			print "19) esl_csgo: csesl, eslcs, esl_csgo"
-			print "20) FragbiteLive: fragbite, fragbitelive"
-			print "21) FACEITTV: face, faceit, faceittv"
-			print "22) Summit1g: summit, summit1g"
-			print "23) Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
-			print "24) Sodapoppin: soda, sodapoppin"
-			print "25) GamesDoneQuick: gdq, gamesdonequick"
-			print "26) Pewdiepie: pew, pewdiepie"
+            print "5) HandofBlood: hob, HandofBlood"
+			print "6) esl_lol: esllol, lolesl, esl_lol"
+			print "7) Nightblue3: nb3, nightblue, nightblue3"
+            print "8) imaqtpie: qtpie"
+			print "9) SirhcEz: sirhcez, sirhcEz"
+			print "10) PhreakStream: phreakstream, phreak"
+			print "11) Cyanide: cyanide"
+			print "12) Trick2g: trick, trick2g"
+            print "13) C9Sneaky: c9sneaky, sneaky"
+			print "14) Meteos: meteos"
+			print "15) TSM_Bjergsen: bjerg, bjergsen"
+			print "16) Zionspartan: zion, zionspartan"
+			print "17) dota2ti: ti, dota2ti"
+			print "18) dota2ti_newcomer: dota2newcomer, dota2tinewcomer, dota2ti_newcomer"
+            print "19) dotamajor: dotamajor"
+			print "20) esl_csgo: csesl, eslcs, esl_csgo"
+			print "21) FragbiteLive: fragbite, fragbitelive"
+			print "22) FACEITTV: face, faceit, faceittv"
+			print "23) Summit1g: summit, summit1g"
+			print "24) Kyleandrypiano: kyle, kylean, kyleandry, kyleandrypiano, kylepiano"
+			print "25) Sodapoppin: soda, sodapoppin"
+			print "26) GamesDoneQuick: gdq, gamesdonequick"
+			print "27) Pewdiepie: pew, pewdiepie"
 			
 
 			read WISH
@@ -240,70 +245,73 @@ do
                 4) livestream kev1ntv
                     return
                     ;;
-				5) livestream esl_lol
-					return
-					;;
-				6) livestream Nightblue3
-					return
-					;;
-                7) livestream imaqtpie
+                5) livestream HandIOfIBlood
                     return
                     ;;
-				8) livestream SirhcEz
+				6) livestream esl_lol
 					return
 					;;
-				9) livestream PhreakStream
+				7) livestream Nightblue3
+					return
+					;;
+                8) livestream imaqtpie
+                    return
+                    ;;
+				9) livestream SirhcEz
+					return
+					;;
+				10) livestream PhreakStream
 					return	
 					;;
-				10) livestream Cyanide
+				11) livestream Cyanide
 					return	
 					;;
-				11) livestream Trick2g
+				12) livestream Trick2g
 					return
 					;;
-                12) livestream c9sneaky
+                13) livestream c9sneaky
                     return
                     ;;
-				13) livestream Meteos
+				14) livestream Meteos
 					return
 					;;
-				14) livestream TSM_Bjergsen
+				15) livestream TSM_Bjergsen
 					return
 					;;
-				15) livestream Zionspartan
+				16) livestream Zionspartan
 					return
 					;;
-				16) livestream dota2ti
+				17) livestream dota2ti
 					return
 					;;
-				17) livestream dota2ti_newcomer
+				18) livestream dota2ti_newcomer
 					return
 					;;
-                18) livestream dotamajor
+                19) livestream dotamajor
                     return
                     ;;
-				19) livestream esl_csgo
+				20) livestream esl_csgo
 					return
 					;;
-				20) livestream FragbiteLive
+				21) livestream FragbiteLive
 					return
 					;;
-				21) livestream FACEITTV
+				22) livestream FACEITTV
 					return
 					;;
-				22) livestream Summit1g
+				23) livestream Summit1g
 					return
 					;;
-				23) livestream Kyleandrypiano
+				24) livestream Kyleandrypiano
 					return
 					;;
-				24) livestream Sodapoppin
+				25) livestream Sodapoppin
 					return
 					;;
-				25) livestream GamesDoneQuick
+				26) livestream GamesDoneQuick
 					return
 					;;
-				26) livestream Pewdiepie
+				27) livestream Pewdiepie
 					return
 					;;
 				*) echo "invalid argument!"
