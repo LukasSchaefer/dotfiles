@@ -92,6 +92,9 @@ alias zion="livestream Zionspartan"
 alias zionspartan="livestream Zionspartan"
 #	Kev1ntv
 alias kevin="livestream kev1ntv"
+#   HandofBlood
+alias hob="livestream HandIOfIBlood"
+alias HandofBlood="livestream HandIOfIBlood"
 #	Trick2g
 alias trick="livestream Trick2g"
 alias trick2g="livestream Trick2g"
