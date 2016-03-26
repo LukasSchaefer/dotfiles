@@ -14,6 +14,10 @@ alias mv="mv -i"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+# Python3 alias
+alias py="python3"
+alias python="python3"
+
 #   load terminal-notifier with reattach-to-user-namespace (necessary to work in Tmux)
 alias terminal-notifier="reattach-to-user-namespace terminal-notifier"
 alias termnot="reattach-to-user-namespace terminal-notifier"
