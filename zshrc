@@ -30,13 +30,16 @@ alias cheatsheets="cd ~/github/cheatsheets"
 alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
 
 # University-Folder alias
-alias prog="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
 alias prog1="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
-alias mfi="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
-alias mathe="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
-alias mathe1="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
-alias psycho="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach"
-alias pdi="cd ~/Documents/Universität/1.\ Semester/Perspektiven\ der\ Informatik"
+alias prog="cd ~/Documents/Universität/2.\ Semester/Prog\ 2"
+alias prog2="cd ~/Documents/Universität/2.\ Semester/Prog\ 2"
+alias mfi1="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
+alias mfi="cd ~/Documents/Universität/2.\ Semester/MFI\ 2"
+alias mfi2="cd ~/Documents/Universität/2.\ Semester/MFI\ 2"
+alias psycho="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
+alias ap="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
+alias np="cd ~/Documents/Universität/2.\ Semester/NP"
+alias Sysarch="cd ~/Documents/Universität/2.\ Semester/SysArch"
 
 # livestream linked alias
 #	Nightblue3
