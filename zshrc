@@ -39,7 +39,7 @@ alias mfi2="cd ~/Documents/Universität/2.\ Semester/MFI\ 2"
 alias psycho="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
 alias ap="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
 alias np="cd ~/Documents/Universität/2.\ Semester/NP"
-alias Sysarch="cd ~/Documents/Universität/2.\ Semester/SysArch"
+alias sysarch="cd ~/Documents/Universität/2.\ Semester/SysArch"
 
 # livestream linked alias
 #	Nightblue3
