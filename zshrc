@@ -3,8 +3,6 @@ source ~/.functions
 source ~/scripts/streams.sh
 source ~/scripts/selectstreams.sh
 source ~/scripts/isnumber.sh
-source ~/scripts/remind.sh
-source ~/scripts/octavepwd.sh
 
 # enable interactive mode for mv, rm, cp (asks before overwriting)
 alias rm="rm -i"
@@ -13,9 +11,6 @@ alias mv="mv -i"
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
-
-# Python3 alias
-alias py="python3"
 
 #   load terminal-notifier with reattach-to-user-namespace (necessary to work in Tmux)
 alias terminal-notifier="reattach-to-user-namespace terminal-notifier"
@@ -132,9 +127,10 @@ alias vox="open -a vox"
 
 alias spotify="spotipy-tui"
 
+# twitch streams related scripts
 alias stream="selectstreams"
+alias streamcheck="python3 ~/python_scripts/streamcheck.py"
 
-alias oct="octavepwd"
 
 #   cheatsheets folder alias
 alias cheatsheets="cd ~/github/cheatsheets"
@@ -152,11 +148,8 @@ alias editindex="mvim ~/Downloads/index.html"
 alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-project"
 
 # own python math function
-alias math="python3 ~/python/math.py"
-alias isprime="python3 ~/python/isprime.py"
+alias math="python3 ~/python_scripts/math_scripts/math_script.py"
 
-# python stream-checker
-alias streamcheck="python3 ~/python/streamcheck.py"
 #################################################################################################################
 
 # Path to your oh-my-zsh installation.
