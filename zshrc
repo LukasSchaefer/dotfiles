@@ -16,7 +16,6 @@ alias reload="exec $SHELL -l"
 
 # Python3 alias
 alias py="python3"
-alias python="python3"
 
 #   load terminal-notifier with reattach-to-user-namespace (necessary to work in Tmux)
 alias terminal-notifier="reattach-to-user-namespace terminal-notifier"
@@ -156,8 +155,8 @@ alias std="open ~/dotfiles/SublimeText3/ProjectWorkspaces/default.sublime-projec
 alias math="python3 ~/python/math.py"
 alias isprime="python3 ~/python/isprime.py"
 
-# own python photofilter
-alias photofilter="python3 ~/python/photofilter.py"
+# python stream-checker
+alias streamcheck="python3 ~/python/streamcheck.py"
 #################################################################################################################
 
 # Path to your oh-my-zsh installation.
