@@ -211,7 +211,7 @@ augroup MyIMAPs
         au VimEnter * call IMAP('\enumerate ', '\begin{enumerate}<++>', 'tex')
         au VimEnter * call IMAP ('\itemize ', '\begin{itemize}<++>','tex')
         au VimEnter * call IMAP('\bf ','\textbf{<++>}<++>','tex')
-        au VimEnter * call IMAP('\automata','\begin{tikzpicture}[->,>=stealth<++>,shorten >=1pt,auto,node distance=2.8cm,semithick]<++> \tikzstyle{every state}=[fill=black,draw=none,text=white]}<++> \node[initial,state] (A) {$<++>$}<++> \end{tikzpicture}','tex')
+        au VimEnter * call IMAP('\automata','\begin{tikzpicture}[->,>=stealth<++>,shorten >=1pt,auto,node distance=2.8cm,semithick]<++> \tikzstyle{every state}=[fill=black,draw=none,text=white]<++> \node[initial,state] (A) {$<++>$}<++> \end{tikzpicture}','tex')
 augroup END
 
 let g:Tex_CompileRule_pdf = 'latexmk -pdf'
