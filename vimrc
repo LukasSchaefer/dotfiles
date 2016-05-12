@@ -211,7 +211,18 @@ augroup MyIMAPs
         au VimEnter * call IMAP('\enumerate ', '\begin{enumerate}<++>', 'tex')
         au VimEnter * call IMAP ('\itemize ', '\begin{itemize}<++>','tex')
         au VimEnter * call IMAP('\bf ','\textbf{<++>}<++>','tex')
-        au VimEnter * call IMAP('\automata','\begin{tikzpicture}[->,>=stealth<++>,shorten >=1pt,auto,node distance=2.8cm,semithick]<++> \node[initial,state] (A) {$<++>$}<++> \end{tikzpicture}','tex')
+"
+" NP Shortcuts
+        au VimEnter * call IMAP('\automata','\begin{tikzpicture}[->,>=stealth<++>,shorten >=1pt,auto,node distance=2.8cm,semithick]<++>  \node[initial,state] (A) {$<++>$}<++> \end{tikzpicture}','tex')
+        au VimEnter * call IMAP('\ellipseautomata','\begin{tikzpicture}[->,>=stealth<++>,shorten >=1pt,auto,node distance=2.8cm,semithick]<++> \tikzset{elliptic state/.style={draw,ellipse, minimum size=0pt}}<++> \node[initial, elliptic state] (A) {$<++>$}<++> \end{tikzpicture}','tex')
+        au VimEnter * call IMAP('\prefix','\AxiomC{}<++>\prefixlabel\UnaryInfC{$<++>$}<++>','tex')
+        au VimEnter * call IMAP('\choicel','\choicellabel\UnaryInfC{$<++>$}<++>','tex')
+        au VimEnter * call IMAP('\choicer','\choicerlabel\UnaryInfC{$<++>$}<++>','tex')       
+        au VimEnter * call IMAP('\parr','\parrlabel\UnaryInfC{$<++>$}<++>','tex')
+        au VimEnter * call IMAP('\parl','\parllabel\UnaryInfC{$<++>$}<++>','tex')
+        au VimEnter * call IMAP('\sync','\synclabel\BinaryInfC{$<++>$}<++>','tex')
+        au VimEnter * call IMAP('\res','\reslabel\BinaryInfC{$<++>$}<++>','tex')
+        au VimEnter * call IMAP('\rec','\reclabel\BinaryInfC{$<++>$}<++>','tex')
 augroup END
 
 let g:Tex_CompileRule_pdf = 'latexmk -pdf'
