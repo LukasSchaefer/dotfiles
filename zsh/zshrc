@@ -1,0 +1,18 @@
+# Essentials
+source ~/dotfiles/zsh/checks.zsh
+source ~/dotfiles/zsh/colors.zsh
+source ~/dotfiles/zsh/setopt.zsh
+source ~/dotfiles/zsh/exports.zsh
+source ~/dotfiles/zsh/prompt.zsh
+source ~/dotfiles/zsh/completion.zsh
+source ~/dotfiles/zsh/aliases.zsh
+source ~/dotfiles/zsh/history.zsh
+source ~/dotfiles/zsh/zsh_hooks.zsh
+
+# Additional scripts
+source ~/scripts/functions.zsh 
+source ~/scripts/stream/selectstreams.sh
+source ~/scripts/stream/streams.sh
+
+#important for autojump to work properly
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
