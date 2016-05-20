@@ -136,6 +136,7 @@ alias cheatsheets="cd ~/github/cheatsheets"
 alias cl="cd; clear"
 alias c="clear"
 alias dotfiles="~/dotfiles"
+alias zsh="~/dotfiles/zsh"
 alias scripts="~/scripts"
 alias dl="~/Downloads"
 alias dt="~/Desktop"
@@ -168,14 +169,14 @@ alias np="cd ~/Documents/Universität/2.\ Semester/NP"
 alias sysarch="cd ~/Documents/Universität/2.\ Semester/SysArch"
 
 # own python math function
-alias math="python3 ~/python_scripts/math_scripts/math_script.py"
+alias math="python3 ~/scripts/python_scripts/math_scripts/math_script.py"
 
 # speedtest
 alias speedtest="zsh ~/dotfiles/scripts/speedtest.sh"
 
 # twitch streams related scripts
 alias stream="selectstreams"
-alias streamcheck="python3 ~/python_scripts/streamcheck.py"
+alias streamcheck="python3 ~/scripts/python_scripts/streamcheck.py"
 
 # alias for applications
 alias vlc="open -a vlc"
