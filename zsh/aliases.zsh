@@ -123,8 +123,7 @@ alias sz='source ~/.zshrc'
 alias reload="exec $SHELL -l"
 
 # colortest_etc launch
-alias colortest="zsh ~/dotfiles/scripts/colortests/colors_esc"
-alias colortest_etc="zsh ~/dotfiles/scripts/colortests/colors_etc"
+alias colortest="zsh ~/scripts/others/colortest/colors_esc"
 
 # -------------------------------------------------------------------
 # Folders And Files
@@ -136,10 +135,11 @@ alias cheatsheets="cd ~/github/cheatsheets"
 alias cl="cd; clear"
 alias c="clear"
 alias dotfiles="~/dotfiles"
+alias dt="~/dotfiles"
 alias zsh="~/dotfiles/zsh"
 alias scripts="~/scripts"
 alias dl="~/Downloads"
-alias dt="~/Desktop"
+alias desk="~/Desktop"
 alias db="~/Dropbox"
 alias dropbox="~/Dropbox"
 alias doc="~/Documents"
