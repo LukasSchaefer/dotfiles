@@ -32,6 +32,7 @@ Bundle 'rbonvall/vim-textobj-latex'
 Bundle 'kana/vim-textobj-entire'
 Bundle 'cypok/vim-sml'
 Bundle 'rstacruz/sparkup'
+Bundle 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -132,10 +133,11 @@ set laststatus=2
 " "let g:airline#extensions#tabline#enabled = 1
 " fancy powerline fonts
 let g:airline_powerline_fonts = 1
-" "let g:airline_left_sep = ''
-" "let g:airline_right_sep = ''
-" "disableing showing of trailing in current file
-" "let g:airline#extensions#whitespace#show_message = 0
+:let g:airline_theme='molokai'
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
+"disableing showing of trailing in current file
+"let g:airline#extensions#whitespace#show_message = 0
 
 " => NERDTree setup
 """""""""""""""""""""""""""""
@@ -300,5 +302,4 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-set background=dark
-colorscheme hybrid
+colorscheme molokai
