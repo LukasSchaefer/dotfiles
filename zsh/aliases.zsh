@@ -116,7 +116,7 @@ alias htop="sudo htop --sort-key PERCENT_CPU"
 
 # alias to cat this file to display
 alias acat='< ~/dotfiles/zsh/aliases.zsh'
-alias fcat='< ~/dotfiles/zsh/functions.zsh'
+alias fcat='< ~/scripts/functions.zsh'
 alias sz='source ~/.zshrc'
 
 # Reload the shell (i.e. invoke as a login shell)
