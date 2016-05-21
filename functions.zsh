@@ -152,3 +152,17 @@ function web_search() {
 
   open "$url"
 }
+
+# function to start livestreamer with twitch source
+livestream(){
+    osascript <<-EOF
+    tell application "iTerm"
+    create window with profile "ZSH_livestream"
+    select first window
+    launch session "Default Session"
+        tell current session of first window
+            write text "livestreamer twitch.tv/'$1' source; exit"
+        end tell
+    end tell
+EOF
+}
