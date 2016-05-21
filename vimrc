@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+set noshowmode
 
 " Settings for Latex-Suite
 filetype plugin on
@@ -137,7 +138,7 @@ let g:airline_powerline_fonts = 1
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
 "disableing showing of trailing in current file
-"let g:airline#extensions#whitespace#show_message = 0
+let g:airline#extensions#whitespace#show_message = 0
 
 " => NERDTree setup
 """""""""""""""""""""""""""""
@@ -302,4 +303,4 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
-colorscheme molokai
+colorscheme Molokai

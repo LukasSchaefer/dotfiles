@@ -136,7 +136,6 @@ alias cl="cd; clear"
 alias c="clear"
 alias dotfiles="~/dotfiles"
 alias dt="~/dotfiles"
-alias zsh="~/dotfiles/zsh"
 alias scripts="~/scripts"
 alias dl="~/Downloads"
 alias desk="~/Desktop"
@@ -172,7 +171,7 @@ alias sysarch="cd ~/Documents/Universität/2.\ Semester/SysArch"
 alias math="python3 ~/scripts/python_scripts/math_scripts/math_script.py"
 
 # speedtest
-alias speedtest="zsh ~/dotfiles/scripts/speedtest.sh"
+alias speedtest="zsh ~/scripts/others/speedtest.sh"
 
 # twitch streams related scripts
 alias stream="selectstreams"

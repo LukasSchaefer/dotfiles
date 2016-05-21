@@ -16,7 +16,7 @@ for COLOR in RED GREEN YELLOW BLUE MAGENTA CYAN BLACK WHITE; do
     unset LSCOLORS
 
     # Main change, you can see directories on a dark background
-    #expor tLSCOLORS=gxfxcxdxbxegedabagacad
+    #export LSCOLORS=gxfxcxdxbxegedabagacad
 
     export CLICOLOR=1
     export LS_COLORS=exfxcxdxbxegedabagacad
