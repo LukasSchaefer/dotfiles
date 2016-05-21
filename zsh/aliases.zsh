@@ -175,7 +175,7 @@ alias speedtest="zsh ~/scripts/others/speedtest.sh"
 
 # twitch streams related scripts
 alias stream="selectstreams"
-alias streamcheck="python3 ~/scripts/python_scripts/streamcheck.py"
+alias streamcheck="python3 ~/scripts/python_script/streamcheck.py"
 
 # alias for applications
 alias vlc="open -a vlc"
