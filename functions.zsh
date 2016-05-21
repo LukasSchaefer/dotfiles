@@ -50,15 +50,37 @@ web(){
 		return
 	fi
 
+    if [ "$1" = "proxer" ]; then
+        open 'http://proxer.me/anime/animeseries/rating/all#top'
+        return
+    fi
+
+    if [ "$1" = "alluc" ]; then
+        open 'http://www.alluc.ee'
+        return
+    fi
+
 # Still to fill!!!!
 # _____________________________________________________________________________________________
-	if [ "$1" = "hlcv" ] || [ "$1" = "highlevel" ]; then
-        open 'http://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/teaching/courses/high-level-computer-vision/'
+	if [ "$1" = "prog" ] || [ "$1" = "prog2" ]; then
+        open 'https://prog2.cs.uni-saarland.de/ss16/'
+        return
 	fi
 
-	if [ "$1" = "hci" ] || [ "$1" = "hcidev" ]; then
-        open 'http://umtl.cs.uni-saarland.de/index.php?id=288'
+	if [ "$1" = "mfi" ] || [ "$1" = "mfi2" ]; then
+        open 'https://www.mpi-inf.mpg.de/de/departments/algorithms-complexity/teaching/summer16/mathematik-fuer-informatiker-2/'
+        return
 	fi
+
+    if [ "$1" = "sysarch" ]; then
+        open 'https://sysarch.cdl.uni-saarland.de/ss16/'
+        return
+    fi
+
+    if [ "$1" = "esem" ]; then
+        open 'http://esem.bsz-bw.de/sulb/'
+        return
+    fi
 
     if [ "$1" = "netflix" ]; then
 		open 'http://www.netflix.com'
