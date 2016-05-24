@@ -97,10 +97,11 @@ function get_pwd(){
     echo $prompt_short_dir
 }
 
-# ${PR_GREEN}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{reset_color%} $(prompt_char) '
+# ${PR_GREEN}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} ${PR_BOLD_YELLOW}$(get_pwd)%{$reset_color%} $(git_prompt_string)%{reset_color%} $(prompt_char) '
 
+# Using %3~ instead of $(get_pwd)% or $(get_pwd) to always display (shortened with ~) the path to a maximum of 3 directories
 PROMPT='
-${PR_BOLD_RED}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(prompt_char) '
+${PR_BOLD_RED}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} ${PR_BOLD_YELLOW}%3~ $reset_color% $(prompt_char) '
 
  
 
