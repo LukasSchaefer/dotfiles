@@ -196,6 +196,8 @@ alias riot="livestream riotgames"
 alias riotgames="livestream riotgames"
 #	esl_summonersinn
 alias maxim="livestream SummonersInnLive"
+alias suminn1="livestream SummonersInnLive1"
+alias suminn2="livestream SummonersInnLive2"
 alias suminn="livestream esl_summonersinn"
 #	Sodapoppin
 alias soda="livestream sodapoppin"
