@@ -194,6 +194,14 @@ alias qtpie="livestream imaqtpie"
 #	RiotGames
 alias riot="livestream riotgames"
 alias riotgames="livestream riotgames"
+#   EULCS
+alias eulcs="livestream EULCS1"
+alias eulcs1="livestream EULCS1"
+alias eulcs2="livestream EULCS2"
+#   NALCS
+alias nalcs="livestream NALCS1"
+alias nalcs1="livestream NALCS1"
+alias nalcs2="livestream NALCS2"
 #	esl_summonersinn
 alias maxim="livestream SummonersInnLive"
 alias suminn1="livestream SummonersInnLive1"
