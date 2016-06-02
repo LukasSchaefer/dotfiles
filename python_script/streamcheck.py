@@ -35,8 +35,9 @@ def check_user(user):
 
 
 # main
-userlist = ["Riotgames", "SummonersInnLive", "esl_summonersinn", "Sodapoppin",
-            "handiofiblood", "Kev1ntv", "C9Sneaky", "TSM_Bjergsen", "Zionspartan"]
+userlist = ["Riotgames", "EULCS1", "EULCS2", "NALCS1", "NALCS2", "SummonersInnLive", "SummonersInnLive1",
+            "SummonersInnLive2", "esl_summonersinn", "Sodapoppin", "handiofiblood", "Kev1ntv", "C9Sneaky",
+            "TSM_Bjergsen", "Zionspartan"]
 
 for user in userlist:
     try:
