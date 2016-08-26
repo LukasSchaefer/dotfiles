@@ -156,16 +156,16 @@ alias tmuxconf="mvim ~/dotfiles/tmux/tmux.conf"
 # -------------------------------------------------------------------
 
 # University-Folder alias
-alias prog1="cd ~/Documents/Universität/1.\ Semester/Programmierung\ 1"
-alias prog="cd ~/Documents/Universität/2.\ Semester/Prog\ 2"
-alias prog2="cd ~/Documents/Universität/2.\ Semester/Prog\ 2"
-alias mfi1="cd ~/Documents/Universität/1.\ Semester/Mathematik\ für\ Informatiker\ 1"
-alias mfi="cd ~/Documents/Universität/2.\ Semester/MFI\ 2"
-alias mfi2="cd ~/Documents/Universität/2.\ Semester/MFI\ 2"
-alias psycho="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
-alias ap="cd ~/Documents/Universität/1.\ Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
-alias np="cd ~/Documents/Universität/2.\ Semester/NP"
-alias sysarch="cd ~/Documents/Universität/2.\ Semester/SysArch"
+alias prog1="cd ~/Documents/Universität/1.Semester/Programmierung\ 1"
+alias prog="cd ~/Documents/Universität/2.Semester/Prog\ 2"
+alias prog2="cd ~/Documents/Universität/2.Semester/Prog\ 2"
+alias mfi1="cd ~/Documents/Universität/1.Semester/Mathematik\ für\ Informatiker\ 1"
+alias mfi="cd ~/Documents/Universität/2.Semester/MFI\ 2"
+alias mfi2="cd ~/Documents/Universität/2.Semester/MFI\ 2"
+alias psycho="cd ~/Documents/Universität/1.Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
+alias ap="cd ~/Documents/Universität/1.Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
+alias np="cd ~/Documents/Universität/2.Semester/NP"
+alias sysarch="cd ~/Documents/Universität/2.Semester/SysArch"
 
 # own python math function
 alias math="python3 ~/scripts/python_scripts/math_scripts/math_script.py"
