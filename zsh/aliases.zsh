@@ -166,6 +166,7 @@ alias psycho="cd ~/Documents/Universität/1.Semester/Psychologie\ Nebenfach/Allg
 alias ap="cd ~/Documents/Universität/1.Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
 alias np="cd ~/Documents/Universität/2.Semester/NP"
 alias sysarch="cd ~/Documents/Universität/2.Semester/SysArch"
+alias sopra="cd ~/Documents/Universität/3.Semester/Sopra"
 
 # own python math function
 alias math="python3 ~/scripts/python_scripts/math_scripts/math_script.py"
