@@ -14,7 +14,7 @@ source ~/scripts/functions.zsh
 source ~/scripts/stream/selectstreams.sh
 source ~/scripts/stream/streams.sh
 
-# add custom COmpletion
+# add custom Completion
 fpath=(~/dotfiles/zsh/completion.zsh $fpath)
 
 # compsys initialization

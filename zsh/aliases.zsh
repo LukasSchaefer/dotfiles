@@ -208,6 +208,9 @@ alias maxim="livestream SummonersInnLive"
 alias suminn1="livestream SummonersInnLive1"
 alias suminn2="livestream SummonersInnLive2"
 alias suminn="livestream esl_summonersinn"
+#   Asmongold
+alias asmon="livestream asmongold"
+alias asmongold="livestream asmongold"
 #	Sodapoppin
 alias soda="livestream sodapoppin"
 alias sodapoppin="livestream sodapoppin"

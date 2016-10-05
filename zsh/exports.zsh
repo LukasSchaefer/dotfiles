@@ -1,10 +1,18 @@
 # Currently this path is appended to dynamically when picking a ruby version
 # zshenv has already started PATH with rbenv so append only here
 
-export PATH=$PATH~/bin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH=$PATH~/bin:/usr/local/bin:/usr/local/sbin:~/bin:/Applications/Gradle_3.0/bin
 
-# Set default console Java to 1.6
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+
+# setting java_home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
+
+# gradle 3.0 setup for sopra (university project)
+# setting GRADLE_HOME
+export GRADLE_HOME=/Users/Lukas/Documents/Universität/3.Semester/Sopra/Gradle_3.0
+
+# adding cabal/bin to Path for Haskell
+export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Setup terminal, and turn on colors
 export TERM=xterm-256color
