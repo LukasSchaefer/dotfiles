@@ -2,8 +2,8 @@ set nocompatible
 filetype off
 set noshowmode
 
-" map Ctrl-L to Esc
-imap <C-L> <Esc>
+" map Ctrl-K to Esc
+imap <C-K> <Esc>
 
 " Settings for Latex-Suite
 filetype plugin on
@@ -260,7 +260,7 @@ let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplete#undo_completion()
-"inoremap <expr><C-l>     neocomplete#complete_common_string()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.

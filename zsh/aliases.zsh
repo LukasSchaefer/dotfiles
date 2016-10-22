@@ -156,16 +156,20 @@ alias tmuxconf="mvim ~/dotfiles/tmux/tmux.conf"
 # -------------------------------------------------------------------
 
 # University-Folder alias
+# 1. Semester
+alias sem1="cd ~/Documents/Universität/1.Semester"
 alias prog1="cd ~/Documents/Universität/1.Semester/Programmierung\ 1"
-alias prog="cd ~/Documents/Universität/2.Semester/Prog\ 2"
-alias prog2="cd ~/Documents/Universität/2.Semester/Prog\ 2"
 alias mfi1="cd ~/Documents/Universität/1.Semester/Mathematik\ für\ Informatiker\ 1"
-alias mfi="cd ~/Documents/Universität/2.Semester/MFI\ 2"
-alias mfi2="cd ~/Documents/Universität/2.Semester/MFI\ 2"
 alias psycho="cd ~/Documents/Universität/1.Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
 alias ap="cd ~/Documents/Universität/1.Semester/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
+# 2. Semester
+alias sem2="cd ~/Documents/Universität/2.Semester"
+alias mfi2="cd ~/Documents/Universität/2.Semester/MFI\ 2"
+alias prog2="cd ~/Documents/Universität/2.Semester/Prog\ 2"
 alias np="cd ~/Documents/Universität/2.Semester/NP"
 alias sysarch="cd ~/Documents/Universität/2.Semester/SysArch"
+# 3. Semester
+alias sem3="cd ~/Documents/Universität/3.Semester"
 alias sopra="cd ~/Documents/Universität/3.Semester/Sopra"
 
 # own python math function
