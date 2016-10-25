@@ -172,6 +172,9 @@ alias sysarch="cd ~/Documents/Universität/2.Semester/SysArch"
 alias sem3="cd ~/Documents/Universität/3.Semester"
 alias sopra="cd ~/Documents/Universität/3.Semester/Sopra"
 
+# sml alias for mosml with rlwrap
+alias mml="rlwrap mosml"
+
 # own python math function
 alias math="python3 ~/scripts/python_scripts/math_scripts/math_script.py"
 
