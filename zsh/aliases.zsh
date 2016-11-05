@@ -171,6 +171,11 @@ alias sysarch="cd ~/Documents/Universität/2.Semester/SysArch"
 # 3. Semester
 alias sem3="cd ~/Documents/Universität/3.Semester"
 alias sopra="cd ~/Documents/Universität/3.Semester/Sopra"
+alias prog1t="cd ~/Documents/Universität/3.Semester/Prog1_Tutor"
+alias mfi3="cd ~/Documents/Universität/3.Semester/MFI3"
+alias kle="cd ~/Documents/Universität/3.Semester/KLE_Psychologie"
+alias algodat="cd ~/Documents/Universität/3.Semester/Algodat"
+alias ti="cd ~/Documents/Universität/3.Semester/TI"
 
 # sml alias for mosml with rlwrap
 alias mml="rlwrap mosml"
@@ -221,6 +226,8 @@ alias asmongold="livestream asmongold"
 #	Sodapoppin
 alias soda="livestream sodapoppin"
 alias sodapoppin="livestream sodapoppin"
+#   Warcraft
+alias warcraft="livestream warcraft"
 #	SummonersInnLive
 alias gerlcs="livestream esl_summonersinn"
 alias summonersinnlive="livestream SummonersInnLive"
@@ -276,7 +283,6 @@ alias kyleandry="livestream Kylelandrypiano"
 alias kyleandrypiano="livestream Kylelandrypiano"
 alias kylepiano="livestream Kylelandrypiano"
 #	dota2ti
-alias ti="livestream dota2ti"
 alias dota2ti="livestream dota2ti"
 #	dota2ti_noob
 alias dota2newcomer="livestream dota2ti_newcomer"
