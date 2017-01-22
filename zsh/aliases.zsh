@@ -215,6 +215,9 @@ alias eulcs2="livestream EULCS2"
 alias nalcs="livestream NALCS1"
 alias nalcs1="livestream NALCS1"
 alias nalcs2="livestream NALCS2"
+#   LCK
+alias lck="livestream LCK1"
+alias lck1="livestream LCK1"
 #	esl_summonersinn
 alias maxim="livestream SummonersInnLive"
 alias suminn1="livestream SummonersInnLive1"
