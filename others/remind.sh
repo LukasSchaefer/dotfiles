@@ -9,7 +9,7 @@ if [ "$#" -eq 0 ]
 elif [ "$#" -eq 1 ]
   then
       while [ $1 != $(date +"%H%M") ]
-      do sleep 5
+      do sleep 30
       done
       osascript <<-EOF
         tell application "iTerm"
@@ -25,7 +25,7 @@ elif [ "$#" -eq 1 ]
 elif [ "$#" -eq 2 ]
   then
       while [ $1 != $(date +"%H%M") ]
-      do sleep 5
+      do sleep 30
       done
       osascript <<-EOF
         tell application "iTerm"
