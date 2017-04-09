@@ -161,7 +161,7 @@ livestream(){
     select first window
     launch session "Default Session"
         tell current session of first window
-            write text "livestreamer twitch.tv/'$1' source; exit"
+            write text "livestreamer twitch.tv/'$1' 1080p60; exit"
         end tell
     end tell
 EOF
