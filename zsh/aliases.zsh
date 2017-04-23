@@ -166,7 +166,6 @@ alias ap="cd ~/Documents/Universität/1.Semester/Psychologie\ Nebenfach/Allgemei
 alias sem2="cd ~/Documents/Universität/2.Semester"
 alias mfi2="cd ~/Documents/Universität/2.Semester/MFI\ 2"
 alias prog2="cd ~/Documents/Universität/2.Semester/Prog\ 2"
-alias np="cd ~/Documents/Universität/2.Semester/NP"
 alias sysarch="cd ~/Documents/Universität/2.Semester/SysArch"
 # 3. Semester
 alias sem3="cd ~/Documents/Universität/3.Semester"
@@ -176,6 +175,11 @@ alias mfi3="cd ~/Documents/Universität/3.Semester/MFI3"
 alias kle="cd ~/Documents/Universität/3.Semester/KLE_Psychologie"
 alias algodat="cd ~/Documents/Universität/3.Semester/Algodat"
 alias ti="cd ~/Documents/Universität/3.Semester/TI"
+# 4. Semester
+alias sem4="cd ~/Documents/Universität/4.Semester"
+alias hack="cd ~/Documents/Universität/4.Semester/Hacking"
+alias infosys="cd ~/Documents/Universität/4.Semester/Infosys"
+alias np="cd ~/Documents/Universität/4.Semester/NP"
 
 # sml alias for mosml with rlwrap
 alias mml="rlwrap mosml"
