@@ -180,6 +180,7 @@ alias sem4="cd ~/Documents/Universität/4.Semester"
 alias hack="cd ~/Documents/Universität/4.Semester/Hacking"
 alias infosys="cd ~/Documents/Universität/4.Semester/Infosys"
 alias np="cd ~/Documents/Universität/4.Semester/NP"
+alias ai="cd ~/Documents/Universität/4.Semester/AI"
 
 # sml alias for mosml with rlwrap
 alias mml="rlwrap mosml"
