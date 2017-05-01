@@ -37,7 +37,7 @@ web(){
 		return
 	fi
 
-	if [ "$1" = "youtube" ]; then
+	if [[ "$1" = "youtube" || "$1" = "yt" ]]; then
 		if [ "$2" = "watchlater" ]; then
 			open 'https://www.youtube.com/playlist?list=WL'
 			return
@@ -60,14 +60,13 @@ web(){
         return
     fi
 
-# Still to fill!!!!
 # _____________________________________________________________________________________________
 	if [ "$1" = "prog" ] || [ "$1" = "prog2" ]; then
         open 'https://prog2.cs.uni-saarland.de/ss16/'
         return
 	fi
 
-	if [ "$1" = "mfi" ] || [ "$1" = "mfi2" ]; then
+	if [ "$1" = "mfi2" ]; then
         open 'https://www.mpi-inf.mpg.de/de/departments/algorithms-complexity/teaching/summer16/mathematik-fuer-informatiker-2/'
         return
 	fi
@@ -77,8 +76,41 @@ web(){
         return
     fi
 
+    if [ "$1" = "ai" ]; then
+        if [ "$2" = "moodle" ]; then
+			open 'https://fai-lecture.cs.uni-saarland.de/login/index.php'
+			return
+		fi
+        open 'http://fai.cs.uni-saarland.de/teaching/summer-17/ai.html'
+        return
+    fi
+
+    if [ "$1" = "infosys" ]; then
+        if [ "$2" = "moodle" ]; then
+			open 'https://islecture.cs.uni-saarland.de/login/index.php'
+			return
+		fi
+        open 'https://infosys.cs.uni-saarland.de/teaching/ss17/infosys.php'
+        return
+    fi
+
     if [ "$1" = "esem" ]; then
         open 'http://esem.bsz-bw.de/sulb/'
+        return
+    fi
+
+    if [ "$1" = "mipl" ]; then
+        open 'http://compilers.cs.uni-saarland.de/teaching/seminar/mipl/2017/index.php'
+        return
+    fi
+
+    if [ "$1" = "np" ]; then
+        open 'https://dcms.cs.uni-saarland.de/np_17/'
+        return
+    fi
+
+    if [ "$1" = "se" ]; then
+        open 'https://www.st.cs.uni-saarland.de/edu/se/2017/index.php'
         return
     fi
 
