@@ -1,4 +1,4 @@
-# -------------------------------------------------------------------
+#\begin{enumerate}[a]
 # use nocorrect alias to prevent auto correct from "fixing" these
 # -------------------------------------------------------------------
 # alias foobar='nocorrect foobar'
@@ -183,6 +183,8 @@ alias np="cd ~/Documents/Universität/4.Semester/NP"
 alias ai="cd ~/Documents/Universität/4.Semester/AI"
 alias se="cd ~/Documents/Universität/4.Semester/SE"
 alias mipl="cd ~/Documents/Universität/4.Semester/MIPL"
+
+alias vorkurs="cd ~/Documents/Universität/Vorkurs_2017"
 
 # sml alias for mosml with rlwrap
 alias mml="rlwrap mosml"
