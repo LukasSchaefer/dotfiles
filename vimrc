@@ -5,7 +5,6 @@ set noshowmode
 " map Ctrl-K to Esc
 imap <C-K> <Esc>
 
-" Settings for Latex-Suite
 filetype plugin on
 
 " Starting with Vim 7, the filetype of empty .tex files defaults to
@@ -37,10 +36,12 @@ Bundle 'kana/vim-textobj-entire'
 Bundle 'cypok/vim-sml'
 Bundle 'rstacruz/sparkup'
 Bundle 'vim-airline/vim-airline-themes'
+Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on
+
 " To ignore plugin indent changes, instead use:
 " filetype plugin on
 "
@@ -109,12 +110,14 @@ set showmatch
 "shows number of columns and lines in powerbar
 set ruler
 
-
 "sets width for shifting with >> or << and tablength and converts tab to
 "spaces
 set shiftwidth=4
 set tabstop=4
 set expandtab
+
+" Rust support
+let g:ycm_rust_src_path="/home//Developer/rust-master/src/"
 
 " __________________________________________________________________________
 autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
