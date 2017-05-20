@@ -148,6 +148,7 @@ alias zshrc="mvim ~/dotfiles/zsh/zshrc"
 alias aliases="mvim ~/dotfiles/zsh/aliases.zsh"
 alias vimrc="vim ~/dotfiles/mvim/vimrc"
 alias tmuxconf="mvim ~/dotfiles/tmux/tmux.conf"
+alias tmuxstart="tmux attach -t MAIN;tmux new -s MAIN;clear;"
 
 
 # -------------------------------------------------------------------
