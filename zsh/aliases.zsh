@@ -58,8 +58,8 @@ alias gd='git diff'
 alias gf='git fetch'
 alias gfa='git fetch --all --prune'
 alias gl='git pull'
-alias glg='git log --stat'
-alias glog='git log --oneline --decorate --graph'
+alias glg='git log --stat --graph'
+alias glog='git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --graph'
 alias gm='git merge'
 alias gmom='git merge origin/master'
 alias gr='git remote'
@@ -73,7 +73,6 @@ alias gsta='git stash'
 
 alias gp='git push'
 
-alias gpl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gcl='git clone'
 alias gta='git tag -a -m'
 
