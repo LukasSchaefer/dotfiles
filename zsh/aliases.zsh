@@ -189,6 +189,10 @@ alias vorkurs="cd ~/Documents/Universität/Vorkurs_2017"
 # sml alias for mosml with rlwrap
 alias mml="rlwrap mosml"
 
+# alias for antlr
+alias antlr4="java -jar /usr/local/lib/antlr-4.7-complete.jar"
+alias grun="java org.antlr.v4.gui.TestRig"
+
 # own python math function
 alias math="python3 ~/scripts/python_scripts/math_scripts/math_script.py"
 
