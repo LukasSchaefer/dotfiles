@@ -22,7 +22,7 @@ Bundle 'gmarik/vundle'
 " The bundles you install will be listed here
 Bundle 'bling/vim-airline'
 Bundle 'christoomey/vim-sort-motion'
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
@@ -120,7 +120,7 @@ set expandtab
 let g:ycm_rust_src_path="/home//Developer/rust-master/src/"
 
 " __________________________________________________________________________
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+"autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
 augroup vimrc_autocmds
 		    autocmd!
@@ -168,33 +168,33 @@ map <F2> :NERDTreeToggle<CR>
 "modes)
 " ]M            Jump on next class or method (normal, visual, operator
 "modes)
-let g:pymode_rope = 1
+"let g:pymode_rope = 1
 
 " Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
+"let g:pymode_doc = 1
+"let g:pymode_doc_key = 'K'
 
 "Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
+"let g:pymode_lint = 1
+"let g:pymode_lint_checker = "pyflakes,pep8"
 " Auto check on save
-let g:pymode_lint_write = 1
+"let g:pymode_lint_write = 1
 
 " Support virtualenv
-let g:pymode_virtualenv = 1
+"let g:pymode_virtualenv = 1
 
 " Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
+"let g:pymode_breakpoint = 1
+"let g:pymode_breakpoint_bind = '<leader>b'
 
 " syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
+"let g:pymode_syntax = 1
+"let g:pymode_syntax_all = 1
+"let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+"let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
-let g:pymode_folding = 0
+"let g:pymode_folding = 0
 
 " Latex Suite setup:
 " REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
