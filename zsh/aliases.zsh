@@ -184,6 +184,7 @@ alias ai="cd ~/Documents/Universitaet/Semester_4/AI"
 alias se="cd ~/Documents/Universitaet/Semester_4/SE"
 alias mipl="cd ~/Documents/Universitaet/Semester_4/MIPL"
 
+alias vk="cd ~/Documents/Universitaet/Vorkurs_2017"
 alias vorkurs="cd ~/Documents/Universitaet/Vorkurs_2017"
 
 # sml alias for mosml with rlwrap

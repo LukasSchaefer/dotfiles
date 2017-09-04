@@ -47,3 +47,7 @@ export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
 # use GNU tools as default
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# fix for git-inspector
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
