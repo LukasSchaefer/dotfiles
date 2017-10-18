@@ -183,6 +183,12 @@ alias np="cd ~/Documents/Universitaet/Semester_4/NP"
 alias ai="cd ~/Documents/Universitaet/Semester_4/AI"
 alias se="cd ~/Documents/Universitaet/Semester_4/SE"
 alias mipl="cd ~/Documents/Universitaet/Semester_4/MIPL"
+# 5. Semester
+alias sem5="cd ~/Documents/Universitaet/Semester_5"
+alias ap="cd ~/Documents/Universitaet/Semester_5/Automatic_Planning"
+alias planning="cd ~/Documents/Universitaet/Semester_5/Automatic_Planning"
+alias irdm="cd ~/Documents/Universitaet/Semester_5/IRDM"
+alias nn="cd ~/Documents/Universitaet/Semester_5/Neural_Networks"
 
 alias vk="cd ~/Documents/Universitaet/Vorkurs_2017"
 alias vorkurs="cd ~/Documents/Universitaet/Vorkurs_2017"
