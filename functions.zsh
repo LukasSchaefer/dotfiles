@@ -114,6 +114,29 @@ web(){
         return
     fi
 
+    if [ "$1" = "nn" ]; then
+        if [ "$2" = "book" ]; then
+			open 'http://www.deeplearningbook.org/'
+			return
+		fi
+        open 'https://www.lsv.uni-saarland.de/index.php?id=174'
+        return
+    fi
+
+    if [ "$1" = "irdm" ]; then
+        open 'https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/teaching/winter-semester-201718/information-retrieval-and-data-mining/'
+        return
+    fi
+
+    if [ "$1" = "ap" ] || [ "$1" = "planning" ]; then
+        if [ "$2" = "moodle" ]; then
+			open 'https://fai-lecture.cs.uni-saarland.de/login/index.php'
+			return
+		fi
+        open 'http://fai.cs.uni-saarland.de/teaching/winter17-18/planning.html'
+        return
+    fi
+
     if [ "$1" = "netflix" ]; then
 		open 'http://www.netflix.com'
 		return
