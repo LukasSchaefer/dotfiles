@@ -51,3 +51,6 @@ export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # fix for git-inspector
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# added by Miniconda3 4.3.21 installer
+export PATH="/Users/Lukas/Developer/miniconda3/bin:$PATH"
