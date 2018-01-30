@@ -236,5 +236,3 @@ augroup MyIMAPs
 augroup END
 
 let g:Tex_CompileRule_pdf = 'latexmk -pdf'
-
-colorscheme brogrammer
