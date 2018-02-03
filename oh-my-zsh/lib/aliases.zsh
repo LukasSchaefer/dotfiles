@@ -62,7 +62,6 @@ alias sem1="cd ~/Documents/Universitaet/Bachelor/Semester_1"
 alias prog1="cd ~/Documents/Universitaet/Bachelor/Semester_1/Programmierung\ 1"
 alias mfi1="cd ~/Documents/Universitaet/Bachelor/Semester_1/Mathematik\ für\ Informatiker\ 1"
 alias psycho="cd ~/Documents/Universitaet/Bachelor/Semester_1/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
-alias ap="cd ~/Documents/Universitaet/Bachelor/Semester_1/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
 # 2. Semester
 alias sem2="cd ~/Documents/Universitaet/Bachelor/Semester_2"
 alias mfi2="cd ~/Documents/Universitaet/Bachelor/Semester_2/MFI\ 2"
