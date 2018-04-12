@@ -24,9 +24,6 @@ alias top="top -o cpu"
 # use htop with sudo (to show ram/cpu) and also sort for cpu usage
 alias htop="sudo htop --sort-key PERCENT_CPU"
 
-# colortest_etc launch
-alias colortest="zsh ~/scripts/others/colortest/colors_esc"
-
 # -------------------------------------------------------------------
 # Folders And Files
 # -------------------------------------------------------------------
@@ -38,7 +35,7 @@ alias cl="cd; clear"
 alias c="clear"
 alias dotfiles="~/dotfiles"
 alias dt="~/dotfiles"
-alias scripts="~/scripts"
+alias scripts="~/dotfiles/scripts"
 alias dl="~/Downloads"
 alias desk="~/Desktop"
 alias db="~/Dropbox"
@@ -101,11 +98,11 @@ alias vorkurs="cd ~/Documents/Universitaet/Vorkurs/Vorkurs_2017"
 alias mml="rlwrap mosml"
 
 # speedtest
-alias speedtest="zsh ~/scripts/others/speedtest.sh"
+alias speedtest="zsh ~/dotfiles/scripts/others/speedtest.sh"
 
 # twitch streams related scripts
 alias stream="selectstreams"
-alias streamcheck="python3 ~/scripts/python_script/streamcheck.py"
+alias streamcheck="python3 ~/dotfiles/scripts/python_script/streamcheck.py"
 
 # alias for applications
 alias vlc="open -a vlc"
