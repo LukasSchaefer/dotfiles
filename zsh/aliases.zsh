@@ -115,12 +115,6 @@ alias vox="open -a vox"
 # livestream linked alias (*DISCLAIMER: Might be too long*)
 # -------------------------------------------------------------------
 # livestream linked alias
-#	Nightblue3
-alias nb3="livestream nightblue3"
-alias nightblue="livestream nightblue3"
-alias nightblue3="livestream nightblue3"
-#   Imaqtpie
-alias qtpie="livestream imaqtpie"
 #	RiotGames
 alias riot="livestream riotgames"
 alias riotgames="livestream riotgames"
@@ -159,49 +153,16 @@ alias esl_csgo="livestream esl_csgo"
 alias lolesl="livestream esl_lol"
 alias esl_lol="livestream esl_lol"
 alias esllol="livestream esl_lol"
-#	SirhcEz
-alias sirhcEz="livestream SirhcEz"
-alias sirhcez="livestream SirhcEz"
-#	PhreakStream
-alias phreakStream="livestream PhreakStream"
-alias phreak="livestream PhreakStream"
-#	Summit1g
-alias summit="livestream Summit1g"
-alias summit1g="livestream Summit1g"
-#	Cyanide
-alias cyanide="livestream Cyanide"
-#	FACEITTV
-alias face="livestream FACEITTV"
-alias faceit="livestream FACEITTV"
-alias faceittv="livestream FACEITTV"
-#	FragbiteLive
-alias fragbite="livestream FragbiteLive"
-alias fragbitelive="livestream FragbiteLive"
 #	Meteos
 alias meteos="livestream Meteos"
 #   Sneaky
 alias sneaky="livestream c9sneaky"
 alias c9sneaky="livestream c9sneaky"
-#	TSM_Bjergsen
-alias bjerg="livestream TSM_Bjergsen"
-alias bjergsen="livestream TSM_Bjergsen"
-#	Zionspartan
-alias zion="livestream Zionspartan"
-alias zionspartan="livestream Zionspartan"
 #	Kev1ntv
 alias kevin="livestream kev1ntv"
 #   HandofBlood
 alias hob="livestream HandIOfIBlood"
 alias HandofBlood="livestream HandIOfIBlood"
-#	Trick2g
-alias trick="livestream Trick2g"
-alias trick2g="livestream Trick2g"
-#	Kylelandrypiano
-alias kyle="livestream Kylelandrypiano"
-alias kylean="livestream Kylelandrypiano"
-alias kyleandry="livestream Kylelandrypiano"
-alias kyleandrypiano="livestream Kylelandrypiano"
-alias kylepiano="livestream Kylelandrypiano"
 #	dota2ti
 alias dota2ti="livestream dota2ti"
 #	dota2ti_noob
@@ -210,9 +171,6 @@ alias dota2tinewcomer="livestream dota2ti_newcomer"
 alias dota2ti_newcomer="livestream dota2ti_newcomer"
 #   dotamajor
 alias dotamajor="livestream dotamajor"
-#	Pewdiepie
-alias pew="livestream Pewdiepie"
-alias pewdiepie="livestream Pewdiepie"
 #	GamesDoneQuick
 alias gdq="livestream GamesDoneQuick"
 alias gamesdonequick="livestream GamesDoneQuick"
