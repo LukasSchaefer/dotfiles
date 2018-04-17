@@ -90,6 +90,10 @@ alias ap="cd ~/Documents/Universitaet/Bachelor/Semester_5/Automatic_Planning"
 alias planning="cd ~/Documents/Universitaet/Bachelor/Semester_5/Automatic_Planning"
 alias irdm="cd ~/Documents/Universitaet/Bachelor/Semester_5/IRDM"
 alias nn="cd ~/Documents/Universitaet/Bachelor/Semester_5/Neural_Networks"
+# 6. Semester
+alias sem6="cd ~/Documents/Universitaet/Bachelor/Semester_6"
+alias ase="cd ~/Documents/Universitaet/Bachelor/Semester_6/ASE"
+alias thesis="cd ~/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit"
 
 alias vk="cd ~/Documents/Universitaet/Vorkurs/Vorkurs_2017"
 alias vorkurs="cd ~/Documents/Universitaet/Vorkurs/Vorkurs_2017"
