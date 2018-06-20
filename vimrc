@@ -35,8 +35,10 @@ Bundle 'rbonvall/vim-textobj-latex'
 Bundle 'kana/vim-textobj-entire'
 Bundle 'cypok/vim-sml'
 Bundle 'rstacruz/sparkup'
+"Bundle 'vim-syntastic/syntastic'
 Bundle 'vim-airline/vim-airline-themes'
 Plugin 'rust-lang/rust.vim'
+Plugin 'davidhalter/jedi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -236,3 +238,14 @@ augroup MyIMAPs
 augroup END
 
 let g:Tex_CompileRule_pdf = 'latexmk -pdf'
+
+
+" Settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0 

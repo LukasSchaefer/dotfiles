@@ -163,3 +163,43 @@ livestream(){
     end tell
 EOF
 }
+
+pdfmerge(){
+    if [ "$#" -ne 3 ]; then
+        echo "ERROR: The script needs 3 arguments: <input1.pdf> <input2.pdf> <output.pdf>"
+        return
+    fi
+
+    if ! [ -f "$1" ]; then
+        echo "ERROR: The first argument has to be an already existing pdf file!"
+        return
+    fi
+
+    if ! [ -f "$2" ]; then
+        echo "ERROR: The second argument has to be an already existing pdf file!" 
+        return
+    fi
+
+    if [ -f "$3" ]; then
+        echo "ERROR: There already exists a file with the output file name!"
+        return
+    fi
+
+    INPUT_FILE1="$1"
+    INPUT_FILE2="$2"
+    MERGE_FILE="$3"
+
+    if ! [ $(head -c 4 "$INPUT_FILE1") = "%PDF" ]; then
+        echo "ERROR: The first input file is not a valid PDF file!"
+        return
+    fi
+
+    if ! [ $(head -c 4 "$INPUT_FILE2") = "%PDF" ]; then
+        echo "ERROR: The second input file is not a valid PDF file!"
+        return
+    fi
+
+    gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$3 $1 $2
+    echo "Merge successfull!"
+    return
+}
