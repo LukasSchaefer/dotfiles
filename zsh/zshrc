@@ -23,6 +23,23 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Hom
 # setting GRADLE_HOME
 export GRADLE_HOME=/Users/Lukas/Documents/Universität/3.Semester/Sopra/Gradle_3.0
 
+# setup for BSc_thesis repo with tensorflow, protobuf and eigen3
+# tensorflow path
+export PATH_TENSORFLOW="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies"
+# protobuf path
+export PATH_PROTOBUF="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies"
+# eigen path
+export PATH_EIGEN="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies"
+
+# add lab path to pythonpath
+export PYTHONPATH="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/lab"
+
+# used for tensorflow scripts
+export PATH="/Users/Lukas/Library/Python/3.6/bin:$PATH"
+
+# add dependencies tensorflow to PYTHONPATH
+export PYTHONPATH="${PYTHONPATH}:/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies/tensorflow_source/tensorflow"
+
 # init rbenv for ruby rbenv
 eval "$(rbenv init -)"
 
@@ -114,12 +131,10 @@ bindkey '^ ' autosuggest-accept
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+# Preferred editor
+export EDITOR='vim'
+export VISUAL='vim'
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

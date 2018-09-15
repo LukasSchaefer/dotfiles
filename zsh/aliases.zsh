@@ -58,18 +58,18 @@ alias tmuxstart="tmux attach -t MAIN;tmux new -s MAIN;clear;"
 # -------------------------------------------------------------------
 
 # University-Folder alias
+# -------------------------------------------------------------------
+# Undergradutes/ Bachelor - Saarland University
+#
 # 1. Semester
-alias sem1="cd ~/Documents/Universitaet/Bachelor/Semester_1"
 alias prog1="cd ~/Documents/Universitaet/Bachelor/Semester_1/Programmierung\ 1"
 alias mfi1="cd ~/Documents/Universitaet/Bachelor/Semester_1/Mathematik\ für\ Informatiker\ 1"
 alias psycho="cd ~/Documents/Universitaet/Bachelor/Semester_1/Psychologie\ Nebenfach/Allgemeine\ Psychologie"
 # 2. Semester
-alias sem2="cd ~/Documents/Universitaet/Bachelor/Semester_2"
 alias mfi2="cd ~/Documents/Universitaet/Bachelor/Semester_2/MFI\ 2"
 alias prog2="cd ~/Documents/Universitaet/Bachelor/Semester_2/Prog\ 2"
 alias sysarch="cd ~/Documents/Universitaet/Bachelor/Semester_2/SysArch"
 # 3. Semester
-alias sem3="cd ~/Documents/Universitaet/Bachelor/Semester_3"
 alias sopra="cd ~/Documents/Universitaet/Bachelor/Semester_3/Sopra"
 alias prog1t="cd ~/Documents/Universitaet/Bachelor/Semester_3/Prog1_Tutor"
 alias mfi3="cd ~/Documents/Universitaet/Bachelor/Semester_3/MFI3"
@@ -77,7 +77,6 @@ alias kle="cd ~/Documents/Universitaet/Bachelor/Semester_3/KLE_Psychologie"
 alias algodat="cd ~/Documents/Universitaet/Bachelor/Semester_3/Algodat"
 alias ti="cd ~/Documents/Universitaet/Bachelor/Semester_3/TI"
 # 4. Semester
-alias sem4="cd ~/Documents/Universitaet/Bachelor/Semester_4"
 alias hack="cd ~/Documents/Universitaet/Bachelor/Semester_4/Hacking"
 alias infosys="cd ~/Documents/Universitaet/Bachelor/Semester_4/Infosys"
 alias np="cd ~/Documents/Universitaet/Bachelor/Semester_4/NP"
@@ -85,13 +84,11 @@ alias ai="cd ~/Documents/Universitaet/Bachelor/Semester_4/AI"
 alias se="cd ~/Documents/Universitaet/Bachelor/Semester_4/SE"
 alias mipl="cd ~/Documents/Universitaet/Bachelor/Semester_4/MIPL"
 # 5. Semester
-alias sem5="cd ~/Documents/Universitaet/Bachelor/Semester_5"
 alias ap="cd ~/Documents/Universitaet/Bachelor/Semester_5/Automatic_Planning"
 alias planning="cd ~/Documents/Universitaet/Bachelor/Semester_5/Automatic_Planning"
 alias irdm="cd ~/Documents/Universitaet/Bachelor/Semester_5/IRDM"
 alias nn="cd ~/Documents/Universitaet/Bachelor/Semester_5/Neural_Networks"
 # 6. Semester
-alias sem6="cd ~/Documents/Universitaet/Bachelor/Semester_6"
 alias ase="cd ~/Documents/Universitaet/Bachelor/Semester_6/ASE"
 alias thesis="cd ~/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit"
 
@@ -100,6 +97,19 @@ alias vorkurs="cd ~/Documents/Universitaet/Vorkurs/Vorkurs_2017"
 
 # sml alias for mosml with rlwrap
 alias mml="rlwrap mosml"
+
+# -------------------------------------------------------------------
+# Postgraduates/ Masters - University of Edinburgh
+#
+alias uoe="cd /Users/Lukas/Documents/Universitaet/Master/UoE"
+# 1. Semester
+alias sem1="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1"
+alias mlpr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/MLPR"
+alias rss="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/RSS"
+# 2. Semester
+alias sem2="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2"
+
+# -------------------------------------------------------------------
 
 # speedtest
 alias speedtest="zsh ~/dotfiles/scripts/others/speedtest.sh"
