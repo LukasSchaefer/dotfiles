@@ -60,6 +60,8 @@ alias tmuxstart="tmux attach -t MAIN;tmux new -s MAIN;clear;"
 # University-Folder alias
 # -------------------------------------------------------------------
 # Undergradutes/ Bachelor - Saarland University
+alias bsc="cd /Users/Lukas/Documents/Universitaet/Bachelor"
+alias bachelor="cd /Users/Lukas/Documents/Universitaet/Bachelor"
 #
 # 1. Semester
 alias prog1="cd ~/Documents/Universitaet/Bachelor/Semester_1/Programmierung\ 1"
@@ -100,6 +102,8 @@ alias mml="rlwrap mosml"
 
 # -------------------------------------------------------------------
 # Postgraduates/ Masters - University of Edinburgh
+alias msc="cd /Users/Lukas/Documents/Universitaet/Master"
+alias master="cd /Users/Lukas/Documents/Universitaet/Master"
 #
 alias uoe="cd /Users/Lukas/Documents/Universitaet/Master/UoE"
 # 1. Semester
