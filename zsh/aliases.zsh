@@ -110,6 +110,8 @@ alias uoe="cd /Users/Lukas/Documents/Universitaet/Master/UoE"
 alias sem1="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1"
 alias mlpr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/MLPR"
 alias rss="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/RSS"
+alias iqc="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/IQC"
+alias stn="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/STN"
 # 2. Semester
 alias sem2="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2"
 
