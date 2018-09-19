@@ -112,6 +112,10 @@ alias mlpr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/MLPR"
 alias rss="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/RSS"
 alias iqc="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/IQC"
 alias stn="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/STN"
+alias nat="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/NAT_DL"
+alias natdl="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/NAT_DL"
+alias nc="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/NAT_DL"
+alias irr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/IRR"
 # 2. Semester
 alias sem2="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2"
 
