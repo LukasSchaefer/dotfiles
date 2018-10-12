@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH~/bin:/usr/local/bin:/usr/local/sbin
 export PATH="/usr/local/bin:$PATH"
+export PATH="/Users/Lukas/Library/Python/3.7/bin:$PATH"
 
 # add openssl to path
 export PATH="/usr/local/opt/openssl/bin:$PATH"

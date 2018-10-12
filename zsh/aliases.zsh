@@ -57,6 +57,9 @@ alias tmuxstart="tmux attach -t MAIN;tmux new -s MAIN;clear;"
 # Personal Use Shortcuts
 # -------------------------------------------------------------------
 
+#DAAD Scholarship folder alias
+alias daad="cd /Users/Lukas/Documents/Universitaet/Stipendien/DAAD"
+#
 # University-Folder alias
 # -------------------------------------------------------------------
 # Undergradutes/ Bachelor - Saarland University
