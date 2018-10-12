@@ -165,41 +165,26 @@ EOF
 }
 
 pdfmerge(){
-    if [ "$#" -ne 3 ]; then
-        echo "ERROR: The script needs 3 arguments: <input1.pdf> <input2.pdf> <output.pdf>"
+    if ! [ "$#" -ge 3 ]; then
+        echo "ERROR: The script needs at least 3 arguments: <output.pdf> <input1.pdf> <input2.pdf> <...>"
         return
     fi
 
-    if ! [ -f "$1" ]; then
-        echo "ERROR: The first argument has to be an already existing pdf file!"
-        return
-    fi
+    for i in "${@:2}"; do
+        # all input files have to exist and be a valid PDF file
+        if ! [ -f "$i" ]; then
+            echo "ERROR: All input arguments have be already existing pdf files!"
+            echo "Input file $i does not exist"
+            return
+        fi
 
-    if ! [ -f "$2" ]; then
-        echo "ERROR: The second argument has to be an already existing pdf file!" 
-        return
-    fi
+        if ! [ $(head -c 4 "$i") = "%PDF" ]; then
+            echo "ERROR: The input file $i is not a valid PDF file!"
+            return
+        fi
+    done
 
-    if [ -f "$3" ]; then
-        echo "ERROR: There already exists a file with the output file name!"
-        return
-    fi
-
-    INPUT_FILE1="$1"
-    INPUT_FILE2="$2"
-    MERGE_FILE="$3"
-
-    if ! [ $(head -c 4 "$INPUT_FILE1") = "%PDF" ]; then
-        echo "ERROR: The first input file is not a valid PDF file!"
-        return
-    fi
-
-    if ! [ $(head -c 4 "$INPUT_FILE2") = "%PDF" ]; then
-        echo "ERROR: The second input file is not a valid PDF file!"
-        return
-    fi
-
-    gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=$3 $1 $2
+    gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=$1 ${@:2}
     echo "Merge successfull!"
     return
 }
