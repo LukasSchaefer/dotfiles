@@ -124,8 +124,8 @@ let g:ycm_rust_src_path="/home//Developer/rust-master/src/"
 " __________________________________________________________________________
 "autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
-augroup vimrc_autocmds
-		    autocmd!
+" augroup vimrc_autocmds
+"	    autocmd!
 			    " highlight characters past column 120
 				"     autocmd FileType python highlight Excess
 				"     ctermbg=DarkGrey guibg=Black

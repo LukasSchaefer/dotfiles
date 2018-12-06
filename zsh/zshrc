@@ -33,13 +33,13 @@ export PATH_PROTOBUF="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Ba
 export PATH_EIGEN="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies"
 
 # add lab path to pythonpath
-export PYTHONPATH="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/lab"
+# export PYTHONPATH="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/lab"
 
 # used for tensorflow scripts
 export PATH="/Users/Lukas/Library/Python/3.6/bin:$PATH"
 
 # add dependencies tensorflow to PYTHONPATH
-export PYTHONPATH="${PYTHONPATH}:/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies/tensorflow_source/tensorflow"
+# export PYTHONPATH="${PYTHONPATH}:/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies/tensorflow_source/tensorflow"
 
 # init rbenv for ruby rbenv
 eval "$(rbenv init -)"

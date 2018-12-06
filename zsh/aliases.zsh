@@ -42,8 +42,8 @@ alias db="~/Dropbox"
 alias dropbox="~/Dropbox"
 alias doc="~/Documents"
 alias wallpaper="~/Pictures/Wallpapers"
-alias wp="~/Developer/mywebsite/jekyll_webpage"
-alias webpage="~/Developer/mywebsite/jekyll_webpage"
+alias ws="~/Developer/mywebsite/"
+alias website="~/Developer/mywebsite/"
 
 # Overall important files
 alias zshrc="mvim ~/dotfiles/zsh/zshrc"
