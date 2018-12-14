@@ -122,6 +122,8 @@ alias irr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/IRR"
 # 2. Semester
 alias sem2="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2"
 
+# societies
+alias hyped="/Users/Lukas/Documents/Universitaet/Master/UoE/others/societies/HYPED"
 # -------------------------------------------------------------------
 
 # speedtest
