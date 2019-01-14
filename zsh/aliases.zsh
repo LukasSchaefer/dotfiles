@@ -121,6 +121,16 @@ alias nc="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/NAT_DL"
 alias irr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_1/IRR"
 # 2. Semester
 alias sem2="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2"
+alias agta="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/AGTA"
+alias gt="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/AGTA"
+alias dme="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/DME"
+alias dmraa="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/DMRAA"
+alias aa="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/DMRAA"
+alias dm="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/DMRAA"
+alias ipp="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/IPP"
+alias pmr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/PMR"
+alias rl="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/RL"
+
 
 # societies
 alias hyped="/Users/Lukas/Documents/Universitaet/Master/UoE/others/societies/HYPED"
