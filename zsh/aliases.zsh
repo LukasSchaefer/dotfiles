@@ -133,7 +133,11 @@ alias rl="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/RL"
 
 
 # societies
-alias hyped="/Users/Lukas/Documents/Universitaet/Master/UoE/others/societies/HYPED"
+alias hyped="cd /Users/Lukas/Documents/Universitaet/Master/UoE/others/societies/HYPED"
+
+# scientific papers library
+alias papers="cd /Users/Lukas/Documents/Universitaet/papers"
+
 # -------------------------------------------------------------------
 
 # speedtest

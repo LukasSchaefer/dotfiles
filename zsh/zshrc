@@ -37,6 +37,7 @@ export PATH_EIGEN="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bache
 
 # used for tensorflow scripts
 export PATH="/Users/Lukas/Library/Python/3.6/bin:$PATH"
+export PATH="/Users/Lukas/Library/Python/2.7/bin:$PATH"
 
 # add dependencies tensorflow to PYTHONPATH
 # export PYTHONPATH="${PYTHONPATH}:/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies/tensorflow_source/tensorflow"
