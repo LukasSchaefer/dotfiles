@@ -11,11 +11,19 @@ export LDFLAGS=-L/usr/local/opt/openssl/lib
 export CPPFLAGS=-I/usr/local/opt/openssl/include
 export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
 
+# LLVM variables for path and compilers
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+
 # adding cabal/bin to Path for Haskell
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # added by Miniconda3 4.3.21 installer
 # export PATH="$PATH:/Users/Lukas/Developer/miniconda3/bin"
+
+# add anaconda3
+export PATH="$PATH:/Users/Lukas/anaconda3/bin"
 
 # setting java_home
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
@@ -38,6 +46,9 @@ export PATH_EIGEN="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bache
 # used for tensorflow scripts
 export PATH="/Users/Lukas/Library/Python/3.6/bin:$PATH"
 export PATH="/Users/Lukas/Library/Python/2.7/bin:$PATH"
+
+# add StarCraft 1.16.1 Path to MPQ files for TorchCraft
+export OPENBW_MPQ_PATH="/Users/Lukas/.wine/drive_c/Program Files/StarCraft_1.16.1"
 
 # add dependencies tensorflow to PYTHONPATH
 # export PYTHONPATH="${PYTHONPATH}:/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies/tensorflow_source/tensorflow"
@@ -152,3 +163,19 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/Lukas/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/Lukas/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/Lukas/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/Lukas/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
