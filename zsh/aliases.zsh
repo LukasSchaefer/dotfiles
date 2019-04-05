@@ -132,6 +132,10 @@ alias rl="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/RL"
 # societies
 alias hyped="cd /Users/Lukas/Documents/Universitaet/Master/UoE/others/societies/HYPED"
 
+# ------------------------------------------------------------------
+# PhD applications/ studies
+alias phd="cd /Users/Lukas/Documents/Universitaet/PhD"
+
 # scientific papers library
 alias papers="cd /Users/Lukas/Documents/Universitaet/papers"
 

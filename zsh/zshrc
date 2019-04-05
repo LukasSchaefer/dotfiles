@@ -19,6 +19,9 @@ export CPPFLAGS="-I/usr/local/opt/llvm/include"
 # adding cabal/bin to Path for Haskell
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
+# adding crosscompile for beaglebone to path
+ export PATH="$HOME/.crosscompile/bin:$PATH"
+
 # added by Miniconda3 4.3.21 installer
 # export PATH="$PATH:/Users/Lukas/Developer/miniconda3/bin"
 
