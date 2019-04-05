@@ -24,6 +24,9 @@ alias top="top -o cpu"
 # use htop with sudo (to show ram/cpu) and also sort for cpu usage
 alias htop="sudo htop --sort-key PERCENT_CPU"
 
+# restart chunkwm
+alias chunkrestart="brew services restart chunkwm"
+
 # -------------------------------------------------------------------
 # Folders And Files
 # -------------------------------------------------------------------
