@@ -32,8 +32,8 @@ alias chunkrestart="brew services restart chunkwm"
 # -------------------------------------------------------------------
 
 # Overall important folders
-alias cheat="cd ~/github/cheatsheets"
-alias cheatsheets="cd ~/github/cheatsheets"
+alias cheat="cd ~/cheatsheets"
+alias cheatsheets="cd ~/cheatsheets"
 alias cl="cd; clear"
 alias c="clear"
 alias dotfiles="~/dotfiles"
