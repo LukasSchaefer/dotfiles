@@ -25,7 +25,9 @@ alias top="top -o cpu"
 alias htop="sudo htop --sort-key PERCENT_CPU"
 
 # restart chunkwm
-alias chunkrestart="brew services restart chunkwm"
+alias chunkrestart="brew services restart skhd; brew services restart chunkwm"
+alias chunkstart="brew services start skhd; brew services start chunkwm"
+alias chunkstop="brew services stop chunkwm; brew services stop skhd"
 
 # -------------------------------------------------------------------
 # Folders And Files
