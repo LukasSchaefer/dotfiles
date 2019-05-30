@@ -100,7 +100,7 @@ alias irdm="cd ~/Documents/Universitaet/Bachelor/Semester_5/IRDM"
 alias nn="cd ~/Documents/Universitaet/Bachelor/Semester_5/Neural_Networks"
 # 6. Semester
 alias ase="cd ~/Documents/Universitaet/Bachelor/Semester_6/ASE"
-alias thesis="cd ~/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit"
+alias bscthesis="cd ~/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit"
 
 alias vk="cd ~/Documents/Universitaet/Vorkurs/Vorkurs_2017"
 alias vorkurs="cd ~/Documents/Universitaet/Vorkurs/Vorkurs_2017"
@@ -132,7 +132,10 @@ alias dmr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/DMR"
 alias ipp="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/IPP"
 alias pmr="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/PMR"
 alias rl="cd /Users/Lukas/Documents/Universitaet/Master/UoE/Semester_2/RL"
-
+# Dissertation
+alias thesis="cd /Users/Lukas/Documents/Universitaet/Master/UoE/dissertation"
+alias mscthesis="cd /Users/Lukas/Documents/Universitaet/Master/UoE/dissertation"
+alias diss="cd /Users/Lukas/Documents/Universitaet/Master/UoE/dissertation"
 
 # societies
 alias hyped="cd /Users/Lukas/Documents/Universitaet/Master/UoE/others/societies/HYPED"
