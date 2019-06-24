@@ -3,6 +3,12 @@ export PATH=$PATH~/bin:/usr/local/bin:/usr/local/sbin
 export PATH="/usr/local/bin:$PATH"
 export PATH="/Users/Lukas/Library/Python/3.7/bin:$PATH"
 
+# update PATH for the Google Cloud SDK.
+if [ -f '/Users/Lukas/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Lukas/google-cloud-sdk/path.zsh.inc'; fi
+
+# enable shell command completion for gcloud.
+if [ -f '/Users/Lukas/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Lukas/google-cloud-sdk/completion.zsh.inc'; fi
+
 # add openssl to path
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
@@ -46,15 +52,18 @@ export PATH_EIGEN="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bache
 # add lab path to pythonpath
 # export PYTHONPATH="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/lab"
 
+# add dependencies tensorflow to PYTHONPATH
+# export PYTHONPATH="${PYTHONPATH}:/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies/tensorflow_source/tensorflow"
+
+# add MAPE to PYTHONPATH
+export PYTHONPATH=/Users/Lukas/Developer/RL/multiagent-particle-envs:/Users/Lukas/Developer/RL/multiagent-particle-envs/bin
+
 # used for tensorflow scripts
 export PATH="/Users/Lukas/Library/Python/3.6/bin:$PATH"
 export PATH="/Users/Lukas/Library/Python/2.7/bin:$PATH"
 
 # add StarCraft 1.16.1 Path to MPQ files for TorchCraft
 export OPENBW_MPQ_PATH="/Users/Lukas/.wine/drive_c/Program Files/StarCraft_1.16.1"
-
-# add dependencies tensorflow to PYTHONPATH
-# export PYTHONPATH="${PYTHONPATH}:/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies/tensorflow_source/tensorflow"
 
 # init rbenv for ruby rbenv
 eval "$(rbenv init -)"
@@ -181,4 +190,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-

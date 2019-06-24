@@ -37,8 +37,9 @@ Bundle 'cypok/vim-sml'
 Bundle 'rstacruz/sparkup'
 "Bundle 'vim-syntastic/syntastic'
 Bundle 'vim-airline/vim-airline-themes'
-Plugin 'rust-lang/rust.vim'
+"Plugin 'rust-lang/rust.vim'
 "Plugin 'davidhalter/jedi-vim'
+Plugin 'python/black'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

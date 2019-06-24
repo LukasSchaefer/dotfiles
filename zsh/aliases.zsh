@@ -24,6 +24,9 @@ alias top="top -o cpu"
 # use htop with sudo (to show ram/cpu) and also sort for cpu usage
 alias htop="sudo htop --sort-key PERCENT_CPU"
 
+# start macvim
+alias mvim="/Applications/MacVim.app/Contents/bin/mvim"
+
 # restart chunkwm
 alias chunkrestart="brew services restart skhd; brew services restart chunkwm"
 alias chunkstart="brew services start skhd; brew services start chunkwm"
@@ -151,6 +154,9 @@ alias papers="cd /Users/Lukas/Documents/Universitaet/papers"
 
 # speedtest
 alias speedtest="zsh ~/dotfiles/scripts/others/speedtest.sh"
+
+# matrix
+alias matrix="bash ~/dotfiles/scripts/others/matrix.sh"
 
 # twitch streams related scripts
 alias stream="selectstreams"
