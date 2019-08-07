@@ -37,10 +37,6 @@ export PATH="$PATH:/Users/Lukas/anaconda3/bin"
 # setting java_home
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
 
-# gradle 3.0 setup for sopra (university project)
-# setting GRADLE_HOME
-export GRADLE_HOME=/Users/Lukas/Documents/Universität/3.Semester/Sopra/Gradle_3.0
-
 # setup for BSc_thesis repo with tensorflow, protobuf and eigen3
 # tensorflow path
 export PATH_TENSORFLOW="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bachelor_Arbeit/dependencies"
@@ -68,7 +64,7 @@ export OPENBW_MPQ_PATH="/Users/Lukas/.wine/drive_c/Program Files/StarCraft_1.16.
 # init rbenv for ruby rbenv
 eval "$(rbenv init -)"
 
-# Setup terminal, and turn on colors
+## Setup terminal, and turn on colors
 export TERM=xterm-256color
 export CLICOLOR=1
 
@@ -89,7 +85,14 @@ export ZSH=/Users/Lukas/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+POWERLEVEL9K_MODE="awesome-patched"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# use pure prompt
+source ./prompts/custom-p10k-pure.zsh
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
