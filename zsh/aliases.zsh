@@ -155,6 +155,8 @@ alias papers="cd /Users/Lukas/Documents/Universitaet/papers"
 # speedtest
 alias speedtest="zsh ~/dotfiles/scripts/others/speedtest.sh"
 
+alias pdfcompress="compresspdf"
+
 # matrix
 alias matrix="bash ~/dotfiles/scripts/others/matrix.sh"
 

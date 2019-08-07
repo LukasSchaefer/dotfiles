@@ -37,9 +37,10 @@ Bundle 'cypok/vim-sml'
 Bundle 'rstacruz/sparkup'
 "Bundle 'vim-syntastic/syntastic'
 Bundle 'vim-airline/vim-airline-themes'
-"Plugin 'rust-lang/rust.vim'
-"Plugin 'davidhalter/jedi-vim'
-Plugin 'python/black'
+"Bundle 'rust-lang/rust.vim'
+"Bundle 'davidhalter/jedi-vim'
+Bundle 'python/black'
+Bundle 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -250,3 +251,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0 
+
+" Settings for Nerdcommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+" let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
