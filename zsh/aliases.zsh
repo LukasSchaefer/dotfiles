@@ -156,6 +156,10 @@ alias papers="cd /Users/Lukas/Documents/Universitaet/papers"
 # speedtest
 alias speedtest="zsh ~/dotfiles/scripts/others/speedtest.sh"
 
+# downlaod client https://github.com/deepjyoti30/downloader-cli
+alias dw="python3 ~/dotfiles/scripts/others/downloader-cli/download.py"
+alias download="python3 ~/dotfiles/scripts/others/downloader-cli/download.py"
+
 alias pdfcompress="compresspdf"
 
 # matrix

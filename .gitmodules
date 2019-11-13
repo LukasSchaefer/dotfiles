@@ -1,0 +1,3 @@
+[submodule "scripts/others/downloader-cli"]
+	path = scripts/others/downloader-cli
+	url = git@github.com:deepjyoti30/downloader-cli.git
