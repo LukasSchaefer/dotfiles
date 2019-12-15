@@ -22,17 +22,8 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/llvm/lib"
 export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
-# adding cabal/bin to Path for Haskell
-export PATH="$HOME/Library/Haskell/bin:$PATH"
-
-# adding crosscompile for beaglebone to path
- export PATH="$HOME/.crosscompile/bin:$PATH"
-
 # added by Miniconda3 4.3.21 installer
 # export PATH="$PATH:/Users/Lukas/Developer/miniconda3/bin"
-
-# add anaconda3
-export PATH="$PATH:/Users/Lukas/anaconda3/bin"
 
 # setting java_home
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home
@@ -54,12 +45,11 @@ export PATH_EIGEN="/Users/Lukas/Documents/Universitaet/Bachelor/Semester_6/Bache
 # add MAPE to PYTHONPATH
 export PYTHONPATH=/Users/Lukas/Developer/RL/multiagent-particle-envs:/Users/Lukas/Developer/RL/multiagent-particle-envs/bin
 
-# used for tensorflow scripts
-export PATH="/Users/Lukas/Library/Python/3.6/bin:$PATH"
-export PATH="/Users/Lukas/Library/Python/2.7/bin:$PATH"
-
 # add StarCraft 1.16.1 Path to MPQ files for TorchCraft
 export OPENBW_MPQ_PATH="/Users/Lukas/.wine/drive_c/Program Files/StarCraft_1.16.1"
+
+# ruby path
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # init rbenv for ruby rbenv
 eval "$(rbenv init -)"
@@ -139,6 +129,9 @@ source ~/dotfiles/zsh/prompts/custom-p10k-pure.zsh
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# disable verification of insecure directories
+ZSH_DISABLE_COMPFIX="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -194,3 +187,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 conda deactivate
+
+# add anaconda3
+export PATH="/Users/Lukas/anaconda3/bin:$PATH"
+
+# cleanup PATH by removing duplicate entries
+typeset -U PATH
