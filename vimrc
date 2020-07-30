@@ -7,11 +7,6 @@ imap <C-K> <Esc>
 
 filetype plugin on
 
-" Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -39,8 +34,9 @@ Bundle 'rstacruz/sparkup'
 Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'rust-lang/rust.vim'
 "Bundle 'davidhalter/jedi-vim'
-Bundle 'python/black'
+"Bundle 'python/black'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -199,48 +195,6 @@ map <F2> :NERDTreeToggle<CR>
 
 " Don't autofold code
 "let g:pymode_folding = 0
-
-" Latex Suite setup:
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
-
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: This enables automatic indentation as you type.
- filetype indent on
- 
-" Latex Suite settings:
-augroup MyIMAPs
-        au!
-        au VimEnter * call IMAP('(', '(<++>)<++>', 'tex')
-        au VimEnter * call IMAP('{', '{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('\{', '\{<++>\}<++>', 'tex')
-        au VimEnter * call IMAP('[', '[<++>]<++>', 'tex')
-        au VimEnter * call IMAP('$', '$<++>$<++>', 'tex')
-        au VimEnter * call IMAP('\s ', '\section{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('\ss ', '\subsection{<++>}<++>', 'tex')
-        au VimEnter * call IMAP('\enumerate ', '\begin{enumerate}<++>', 'tex')
-        au VimEnter * call IMAP ('\itemize ', '\begin{itemize}<++>','tex')
-        au VimEnter * call IMAP('\bf ','\textbf{<++>}<++>','tex')
-"
-" NP Shortcuts
-        au VimEnter * call IMAP('\automata','\begin{tikzpicture}[->,>=stealth<++>,shorten >=1pt,auto,node distance=2.8cm,semithick]<++>  \node[initial,state] (A) {$<++>$}<++> \end{tikzpicture}','tex')
-        au VimEnter * call IMAP('\ellipseautomata','\begin{tikzpicture}[->,>=stealth<++>,shorten >=1pt,auto,node distance=2.8cm,semithick]<++> \tikzset{elliptic state/.style={draw,ellipse, minimum size=0pt}}<++> \node[initial, elliptic state] (A) {$<++>$}<++> \end{tikzpicture}','tex')
-        au VimEnter * call IMAP('\prefix','\AxiomC{}<++>\prefixlabel\UnaryInfC{$<++>$}<++>','tex')
-        au VimEnter * call IMAP('\choicel','\choicellabel\UnaryInfC{$<++>$}<++>','tex')
-        au VimEnter * call IMAP('\choicer','\choicerlabel\UnaryInfC{$<++>$}<++>','tex')       
-        au VimEnter * call IMAP('\parr','\parrlabel\UnaryInfC{$<++>$}<++>','tex')
-        au VimEnter * call IMAP('\parl','\parllabel\UnaryInfC{$<++>$}<++>','tex')
-        au VimEnter * call IMAP('\sync','\synclabel\BinaryInfC{$<++>$}<++>','tex')
-        au VimEnter * call IMAP('\res','\reslabel\BinaryInfC{$<++>$}<++>','tex')
-        au VimEnter * call IMAP('\rec','\reclabel\BinaryInfC{$<++>$}<++>','tex')
-augroup END
-
-let g:Tex_CompileRule_pdf = 'latexmk -pdf'
-
 
 " Settings for Syntastic
 set statusline+=%#warningmsg#

@@ -21,8 +21,8 @@ alias o="open ."
 # sorts top list by cpu default
 alias top="top -o cpu"
 
-# use htop with sudo (to show ram/cpu) and also sort for cpu usage
-alias htop="sudo htop --sort-key PERCENT_CPU"
+# use htop and sort for cpu usage
+alias htop="htop --sort-key PERCENT_CPU"
 
 # start macvim
 alias mvim="/Applications/MacVim.app/Contents/bin/mvim"
