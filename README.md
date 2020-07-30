@@ -1,4 +1,4 @@
-## Lukas' Dotfiles
+## MacOS Dotfiles
 
 This contains my dotfiles including config files for **tmux**, **vimrc**, **zshrc** and aliases for zsh.
 
