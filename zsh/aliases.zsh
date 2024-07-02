@@ -32,5 +32,5 @@ alias doc="cd ~/Documents"
 alias phd="cd ~/Documents/phd"
 
 # Overall important files
-alias zshrc="vim ~/dotfiles/zsh/zshrc"
-alias aliases="vim ~/dotfiles/zsh/aliases.zsh"
+alias zshrc="nvim ~/dotfiles/zsh/zshrc"
+alias aliases="nvim ~/dotfiles/zsh/aliases.zsh"
