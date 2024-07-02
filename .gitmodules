@@ -1,3 +1,6 @@
 [submodule "scripts/others/downloader-cli"]
 	path = scripts/others/downloader-cli
 	url = git@github.com:deepjyoti30/downloader-cli.git
+[submodule "nvim/kickstart.nvim"]
+	path = nvim/kickstart.nvim
+	url = git@github.com:LukasSchaefer/kickstart.nvim.git
