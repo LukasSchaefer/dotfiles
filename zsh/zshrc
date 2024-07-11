@@ -69,6 +69,8 @@ bindkey '^ ' autosuggest-accept
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
+# to make sure anaconda appears first in PATH
+export PATH="/Users/lschaefer/miniconda/bin:$PATH"
 __conda_setup="$('/Users/lschaefer/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -82,3 +84,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# remove duplicates from PATH
+PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
+
+# add fzf
+source <(fzf --zsh)
