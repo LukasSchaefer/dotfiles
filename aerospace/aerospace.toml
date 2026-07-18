@@ -214,14 +214,15 @@ enter = 'mode main'
 esc = 'mode main'
 
 # bind applications to workspaces
+# Use `aerospace list-apps` to get app-id
 
 # [[on-window-detected]]
 # if.app-id = 'com.googlecode.iterm2'
 # run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace 2'
+if.app-id = 'com.ikmultimedia.AmpliTube5'
+run = ['layout floating', 'move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-id = 'com.todoist.mac.Todoist'
@@ -229,6 +230,10 @@ run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.tdesktop.Telegram'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
@@ -244,8 +249,28 @@ if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = 'move-node-to-workspace 6'
+
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+run = 'move-node-to-workspace 6'
+
+[[on-window-detected]]
+if.app-id = 'org.zotero.zotero'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
@@ -257,7 +282,7 @@ run = 'move-node-to-workspace 8'
 
 # assign workspaces to monitors
 [workspace-to-monitor-force-assignment]
-1 = 'main'
-4 = 'main'
+# 1 = 'main'
+# 4 = 'main'
 3 = 'secondary'
 8 = 'secondary'
