@@ -1,0 +1,104 @@
+# SketchyBar
+
+Custom [SketchyBar](https://github.com/FelixKratz/SketchyBar) config, integrated with
+[AeroSpace](../aerospace/aerospace.toml). Started minimal and grew widget by widget -
+this doc describes the setup as it stands, not the history of how it got there.
+
+**Left:** front app name · AeroSpace workspaces (only non-empty + the focused one are
+shown, each labeled with the app icons of its windows).
+**Right:** CPU · RAM · keyboard layout (US | DE | ZH, active one highlighted) · battery
+· system menu (opens Control Center) · clock.
+
+## 1. Install prerequisites
+
+```bash
+# SketchyBar itself
+brew install felixkratz/formulae/sketchybar
+
+# Window manager it integrates with
+brew install --cask nikitabobko/tap/aerospace
+
+# Glyphs for the per-app workspace icons (icon_map.sh maps app name -> glyph)
+brew install --cask font-sketchybar-app-font
+```
+
+You also need a Nerd Font for the bar's own text/icons (battery, wifi, clock, ...) -
+`sketchybarrc` currently points `FONT` at `MesloLGS Nerd Font`. If you use a different
+Nerd Font, update that one line. To check what's actually installed and avoid the
+"tofu box" glyphs this repo hit once already:
+
+```bash
+system_profiler SPFontsDataType | grep -i "family.*nerd"
+```
+
+## 2. Symlink and start
+
+```bash
+ln -sfn ~/dotfiles/sketchybar ~/.config/sketchybar
+brew services start sketchybar
+```
+
+`brew services` runs it as a launchd agent, so it survives reboots/logins. After
+editing any file under here, `sketchybar --reload` picks up the changes (no need to
+restart the service).
+
+AeroSpace also needs to know to notify SketchyBar on workspace changes - that hook
+lives in `../aerospace/aerospace.toml`'s `exec-on-workspace-change`, already wired up.
+Run `aerospace reload-config` once after symlinking that file too.
+
+## 3. Grant permissions
+
+| Permission | Grant to | Why |
+|---|---|---|
+| **Accessibility** | `sketchybar` | The system-menu button opens Control Center via UI scripting (`tell application "System Events" to click ...`); without this the click silently fails with error `-1719`. System Settings -> Privacy & Security -> Accessibility. |
+
+Nothing else needs a permission grant. The wifi widget deliberately stays
+connectivity-only (no SSID) to avoid the Location Services + third-party
+`wifi-unredactor` helper that macOS otherwise requires since Sonoma - see the comment
+above the (commented-out) wifi item in `sketchybarrc` if you want to revisit that.
+
+## File layout
+
+```
+sketchybar/
+├── sketchybarrc              # bar + item declarations (the entry point)
+├── colors.sh                 # Nord palette + Nerd Font icon glyph constants
+└── plugins/
+    ├── front_app.sh           # focused app name (front_app_switched event, lsappinfo fallback on reload)
+    ├── aerospace_workspaces.sh # workspace highlight + per-window app icons (icon_map.sh)
+    ├── workspace_click.sh      # left-click = switch workspace, right-click = open action menu
+    ├── aerospace_menu_action.sh # the menu's reload/restart/quit actions
+    ├── popup_hover.sh          # hover highlight shared by all popup menu rows
+    ├── cpu.sh / ram.sh         # `top` / `vm_stat` + `sysctl`, polled every 5s
+    ├── keyboard.sh             # `defaults`+`plutil` -> JSON, handles both keyboard
+    │                           #   layouts and input methods (e.g. Chinese Pinyin)
+    ├── battery.sh              # `pmset`
+    ├── wifi.sh                 # `ipconfig`, connectivity only (item currently commented out)
+    ├── clock.sh                # `date`
+    ├── open_control_center.sh  # AppleScript UI-scripting click handler
+    └── icon_map.sh             # app name -> sketchybar-app-font glyph (from the
+                                 # sketchybar-app-font project's own GitHub release,
+                                 # not hand-written)
+```
+
+## Design notes / gotchas
+
+- **macOS ships bash 3.2** (`/bin/bash`), which lacks `\u`/`\U` escapes and `mapfile`.
+  Icon glyphs in `colors.sh` are therefore raw UTF-8 `\x` byte escapes (looked up
+  against `ryanoasis/nerd-fonts`' `glyphnames.json`), and array-building uses a
+  `while read` loop instead of `mapfile`.
+- **Right-aligned items stack in reverse add-order**: each new `--add item X right`
+  ends up to the *left* of previously-added right items. The on-screen order in
+  `sketchybarrc` is therefore the reverse of the visual left-to-right order - see the
+  comment above the right-side section before reordering anything there.
+- **Keyboard layout order is pinned** (US, DE, ZH) in `keyboard.sh` regardless of the
+  order macOS reports in `AppleEnabledInputSources`, which just tracks the order
+  layouts were added in System Settings.
+- **CPU polls every 5s, not more often**: `top -l 1 -n 0` costs ~300ms per call;
+  everything else here is single-digit milliseconds and polls faster (keyboard every
+  1s, RAM every 5s).
+- **Workspace icon vertical alignment**: some `sketchybar-app-font` glyphs (e.g. Spark,
+  Todoist) are drawn larger within their own glyph cell than others (e.g. Brave,
+  iTerm), so they can look vertically off next to the workspace number. That's a
+  glyph-proportion inconsistency in the font itself, not a padding/alignment bug here -
+  confirmed by comparing workspaces with different apps under identical item settings.

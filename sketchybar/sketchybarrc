@@ -1,0 +1,230 @@
+#!/usr/bin/env bash
+# Minimal SketchyBar config, integrated with AeroSpace (see
+# aerospace/aerospace.toml exec-on-workspace-change). Left: front app name,
+# then workspaces 1-10 with a highlighted focused workspace and per-window
+# app icons. Right: CPU/RAM, keyboard layout, battery, wifi, system menu
+# (opens Control Center), clock.
+
+source "$CONFIG_DIR/colors.sh"
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+
+FONT="MesloLGS Nerd Font"
+# Text/percentage labels need the regular nerd font, not the app-icon font
+# used by default for the workspace items.
+TEXT_LABEL_FONT="$FONT:Medium:12.0"
+
+# ---- Bar ----
+sketchybar --bar \
+	position=top \
+	height=32 \
+	sticky=on \
+	padding_left=10 \
+	padding_right=10 \
+	color=$BAR_COLOR
+
+# ---- Defaults ----
+sketchybar --default \
+	padding_left=4 \
+	padding_right=4 \
+	icon.font="$FONT:Bold:13.0" \
+	icon.color=$LABEL_COLOR \
+	icon.padding_left=9 \
+	icon.padding_right=4 \
+	label.font="sketchybar-app-font:Regular:15.0" \
+	label.color=$LABEL_COLOR \
+	label.padding_left=0 \
+	label.padding_right=9 \
+	background.color=$ITEM_BG_COLOR \
+	background.corner_radius=6 \
+	background.height=24 \
+	background.drawing=on
+
+# ---- Front app (left, before the workspace indicator) ----
+sketchybar --add item front_app left \
+	--set front_app \
+	icon.drawing=off \
+	label.font="$FONT:Bold:12.0" \
+	label.padding_left=8 \
+	label.padding_right=8 \
+	script="$PLUGIN_DIR/front_app.sh" \
+	--subscribe front_app front_app_switched forced
+
+# ---- AeroSpace workspaces (left) ----
+# Fired by aerospace's exec-on-workspace-change.
+sketchybar --add event aerospace_workspace_change
+
+# Right-click any workspace for an AeroSpace action menu (reload config /
+# restart / quit) via plugins/workspace_click.sh, which reads $BUTTON to
+# decide between switching workspace and toggling this popup.
+space_args=()
+for sid in $(seq 1 10); do
+	space_args+=(
+		--add item "space.$sid" left
+		--set "space.$sid"
+		drawing=off
+		icon="$sid"
+		label.drawing=off
+		click_script="$PLUGIN_DIR/workspace_click.sh $sid"
+		popup.background.color="$ITEM_BG_COLOR"
+		popup.background.corner_radius=6
+		popup.blur_radius=20
+		popup.align=center
+
+		--add item "space.$sid.reload" "popup.space.$sid"
+		--set "space.$sid.reload"
+		background.drawing=off
+		label="Reload Config"
+		label.font="$FONT:Regular:12.0"
+		click_script="$PLUGIN_DIR/aerospace_menu_action.sh $sid reload"
+		script="$PLUGIN_DIR/popup_hover.sh"
+		--subscribe "space.$sid.reload" mouse.entered mouse.exited
+
+		--add item "space.$sid.restart" "popup.space.$sid"
+		--set "space.$sid.restart"
+		background.drawing=off
+		label="Restart AeroSpace"
+		label.font="$FONT:Regular:12.0"
+		click_script="$PLUGIN_DIR/aerospace_menu_action.sh $sid restart"
+		script="$PLUGIN_DIR/popup_hover.sh"
+		--subscribe "space.$sid.restart" mouse.entered mouse.exited
+
+		--add item "space.$sid.quit" "popup.space.$sid"
+		--set "space.$sid.quit"
+		background.drawing=off
+		label="Quit AeroSpace"
+		label.font="$FONT:Regular:12.0"
+		click_script="$PLUGIN_DIR/aerospace_menu_action.sh $sid quit"
+		script="$PLUGIN_DIR/popup_hover.sh"
+		--subscribe "space.$sid.quit" mouse.entered mouse.exited
+	)
+done
+sketchybar "${space_args[@]}"
+
+# Hidden listener that redraws workspace highlight + app icons on every change.
+sketchybar --add item aerospace_listener left \
+	--set aerospace_listener \
+	drawing=off \
+	updates=on \
+	script="$PLUGIN_DIR/aerospace_workspaces.sh" \
+	--subscribe aerospace_listener aerospace_workspace_change forced \
+	system_woke space_windows_change
+
+# ---- Right side ----
+# Right-position items stack right-to-left (each new --add ends up to the
+# left of the previous ones), so this list is added in reverse of the
+# on-screen order: CPU, RAM, keyboard, battery, wifi, bluetooth, clock.
+
+# Clock: day, date, 24h time.
+sketchybar --add item clock right \
+	--set clock \
+	update_freq=10 \
+	label.font="$TEXT_LABEL_FONT" \
+	script="$PLUGIN_DIR/clock.sh" \
+	--subscribe clock forced
+
+# System menu: opens the real macOS Control Center (wifi/bluetooth/focus/
+# etc.) via UI scripting. Needs Accessibility permission granted to
+# sketchybar in System Settings -> Privacy & Security -> Accessibility, or
+# the click silently fails (error -1719).
+sketchybar --add item system_menu right \
+	--set system_menu \
+	icon="$ICON_SYSMENU" \
+	label.drawing=off \
+	click_script="$PLUGIN_DIR/open_control_center.sh"
+
+# Wifi: connected/disconnected (no SSID - redacted by macOS since Sonoma
+# without Location permission). wifi_change is unreliable since Sonoma too,
+# so update_freq is the real driver here.
+# Commented out (not much value when almost always connected) - uncomment to
+# bring it back.
+# sketchybar --add item wifi right \
+# 	--set wifi \
+# 	update_freq=10 \
+# 	label.drawing=off \
+# 	script="$PLUGIN_DIR/wifi.sh" \
+# 	--subscribe wifi wifi_change system_woke forced
+
+# Battery: percentage + charge icon.
+sketchybar --add item battery right \
+	--set battery \
+	update_freq=30 \
+	label.font="$TEXT_LABEL_FONT" \
+	script="$PLUGIN_DIR/battery.sh" \
+	--subscribe battery power_source_change system_woke forced
+
+# Keyboard layout: one compact block - a keyboard icon, then "US | DE | ZH"
+# style labels (kbd.1..kbd.4) separated by "|" dividers (kbd.sep1..sep3),
+# all sharing one background via a bracket instead of each item having its
+# own pill. plugins/keyboard.sh toggles which slots/separators are visible
+# and colors whichever source is active; background/pill styling lives on
+# the bracket, not the individual items, so they're all background.drawing=off.
+kbd_args=()
+for i in $(seq 1 4); do
+	kbd_args+=(
+		--add item "kbd.$i" right
+		--set "kbd.$i"
+		drawing=off
+		background.drawing=off
+		icon.drawing=off
+		label.font="$FONT:Bold:12.0"
+		label.padding_left=1
+		label.padding_right=1
+	)
+	if (( i < 4 )); then
+		kbd_args+=(
+			--add item "kbd.sep$i" right
+			--set "kbd.sep$i"
+			drawing=off
+			background.drawing=off
+			icon.drawing=off
+			label="|"
+			label.color="$WHITE"
+			label.padding_left=1
+			label.padding_right=1
+		)
+	fi
+done
+sketchybar "${kbd_args[@]}"
+
+sketchybar --add item kbd_icon right \
+	--set kbd_icon \
+	background.drawing=off \
+	icon="$ICON_KEYBOARD" \
+	icon.padding_left=8 \
+	icon.padding_right=2 \
+	label.drawing=off
+
+sketchybar --add bracket kbd_bracket kbd_icon kbd.1 kbd.sep1 kbd.2 kbd.sep2 kbd.3 kbd.sep3 kbd.4 \
+	--set kbd_bracket \
+	background.color="$ITEM_BG_COLOR" \
+	background.corner_radius=6 \
+	background.height=24 \
+	background.drawing=on
+
+sketchybar --add item keyboard_listener right \
+	--set keyboard_listener \
+	drawing=off \
+	updates=on \
+	update_freq=1 \
+	script="$PLUGIN_DIR/keyboard.sh" \
+	--subscribe keyboard_listener forced system_woke
+
+# RAM: used % via `memory_pressure` (cheap, ~3ms), so it can poll often.
+sketchybar --add item ram right \
+	--set ram \
+	update_freq=5 \
+	label.font="$TEXT_LABEL_FONT" \
+	script="$PLUGIN_DIR/ram.sh" \
+	--subscribe ram forced
+
+# CPU: total load % via `top` (~300ms per call, so a longer poll interval
+# than the other widgets to keep overhead low).
+sketchybar --add item cpu right \
+	--set cpu \
+	update_freq=5 \
+	label.font="$TEXT_LABEL_FONT" \
+	script="$PLUGIN_DIR/cpu.sh" \
+	--subscribe cpu forced
+
+# ---- Finalize ----
+sketchybar --update
