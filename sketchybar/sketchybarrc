@@ -39,16 +39,6 @@ sketchybar --default \
 	background.height=24 \
 	background.drawing=on
 
-# ---- Front app (left, before the workspace indicator) ----
-sketchybar --add item front_app left \
-	--set front_app \
-	icon.drawing=off \
-	label.font="$FONT:Bold:12.0" \
-	label.padding_left=8 \
-	label.padding_right=8 \
-	script="$PLUGIN_DIR/front_app.sh" \
-	--subscribe front_app front_app_switched forced
-
 # ---- AeroSpace workspaces (left) ----
 # Fired by aerospace's exec-on-workspace-change.
 sketchybar --add event aerospace_workspace_change
@@ -99,6 +89,20 @@ for sid in $(seq 1 10); do
 	)
 done
 sketchybar "${space_args[@]}"
+
+# ---- Front app (left, after the workspace indicator) ----
+# Placed after the workspaces (rather than before) with extra left padding
+# as a margin, so its variable-width label doesn't shove the fixed-width
+# workspace items around every time the front app changes.
+sketchybar --add item front_app left \
+	--set front_app \
+	icon.drawing=off \
+	padding_left=16 \
+	label.font="$FONT:Bold:12.0" \
+	label.padding_left=8 \
+	label.padding_right=8 \
+	script="$PLUGIN_DIR/front_app.sh" \
+	--subscribe front_app front_app_switched forced
 
 # Hidden listener that redraws workspace highlight + app icons on every change.
 sketchybar --add item aerospace_listener left \

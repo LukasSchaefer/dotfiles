@@ -56,8 +56,14 @@ inner.horizontal = 8
 inner.vertical =   8
 outer.left =       8
 outer.bottom =     8
-outer.top =        8
 outer.right =      8
+
+# The native menu bar is hidden system-wide (_HIHideMenuBar), so macOS
+# reserves no top space on its own. The built-in display's notch safe-area
+# takes care of that screen automatically, but external monitors need an
+# explicit top gap tall enough to clear the SketchyBar bar (height=32 in
+# sketchybar/sketchybarrc) or windows tuck up underneath it.
+outer.top = [{ monitor."Built-in" = 8 }, 36]
 
 # See https://nikitabobko.github.io/AeroSpace/guide#exec-env-vars
 [exec]                   # Again, you don't need to copy all config sections to your config.
@@ -192,7 +198,12 @@ alt-shift-0 = 'move-node-to-workspace 10'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-b = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+# Also re-fires the sketchybar workspace refresh: moving a workspace to
+# another monitor doesn't change the focused workspace, so it wouldn't
+# otherwise trigger exec-on-workspace-change and the per-display filtering
+# in sketchybar/plugins/aerospace_workspaces.sh would go stale.
+alt-shift-tab = ['move-workspace-to-monitor --wrap-around next',
+    'exec-and-forget /bin/bash -c "sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'

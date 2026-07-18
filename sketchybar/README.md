@@ -4,10 +4,15 @@ Custom [SketchyBar](https://github.com/FelixKratz/SketchyBar) config, integrated
 [AeroSpace](../aerospace/aerospace.toml). Started minimal and grew widget by widget -
 this doc describes the setup as it stands, not the history of how it got there.
 
-**Left:** front app name · AeroSpace workspaces (only non-empty + the focused one are
-shown, each labeled with the app icons of its windows).
+**Left:** AeroSpace workspaces (only non-empty + the focused one are shown, each labeled
+with the app icons of its windows) · front app name, offset with a margin so its
+variable width doesn't shove the workspace items around.
 **Right:** CPU · RAM · keyboard layout (US | DE | ZH, active one highlighted) · battery
 · system menu (opens Control Center) · clock.
+
+Multi-monitor aware: SketchyBar draws a bar on every connected display, but each
+display's bar only shows the AeroSpace workspaces currently on that screen - see
+[Multi-monitor](#multi-monitor) below.
 
 ## 1. Install prerequisites
 
@@ -56,6 +61,32 @@ Nothing else needs a permission grant. The wifi widget deliberately stays
 connectivity-only (no SSID) to avoid the Location Services + third-party
 `wifi-unredactor` helper that macOS otherwise requires since Sonoma - see the comment
 above the (commented-out) wifi item in `sketchybarrc` if you want to revisit that.
+
+## Multi-monitor
+
+SketchyBar mirrors a bar onto every connected display by default. Two things make that
+work correctly rather than just look like it does:
+
+- **Window gap on external displays**: the real macOS menu bar is hidden system-wide
+  (`_HIHideMenuBar`), so macOS doesn't reserve any top space on its own - AeroSpace's
+  `outer.top` gap is the only thing clearing the bar. The built-in display's notch
+  safe-area happens to cover that automatically, but external monitors need it set
+  explicitly. See the per-monitor `gaps.outer.top` override in
+  [`../aerospace/aerospace.toml`](../aerospace/aerospace.toml) - bump the fallback value
+  there if you change SketchyBar's `height`.
+- **Workspace items are pinned to their current display**: `aerospace_workspaces.sh`
+  queries `aerospace list-workspaces --monitor all` on every refresh and sets each
+  `space.N` item's `display=` property to match, so a screen only shows the workspace
+  numbers that are actually on it. `move-workspace-to-monitor` (`alt-shift-tab`) doesn't
+  change the focused workspace, so it wouldn't otherwise trigger a refresh - the
+  binding in `aerospace.toml` explicitly re-fires the sketchybar event after moving.
+
+**Known gotcha**: if the system-menu button (Control Center) stops responding on a
+display that was connected *after* login/boot, restarting `SystemUIServer`/
+`ControlCenter` and even toggling "Displays have separate Spaces" off/on may not fix
+it - that status item's window can end up bound to whichever display was active at
+boot and not rebind on its own. A full logout or reboot resolved it when this came up;
+no lighter fix found.
 
 ## File layout
 

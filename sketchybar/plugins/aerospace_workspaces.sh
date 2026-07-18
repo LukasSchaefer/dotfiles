@@ -11,6 +11,13 @@ focused="${FOCUSED_WORKSPACE:-$(aerospace list-workspaces --focused)}"
 
 windows="$(aerospace list-windows --all --format '%{workspace}|%{app-name}' 2>/dev/null)"
 
+# workspace -> display index (matches sketchybar's display= property), so
+# each screen's bar only shows the workspaces currently on that screen.
+monitor_map="$(aerospace list-workspaces --monitor all --format '%{workspace}|%{monitor-appkit-nsscreen-screens-id}' 2>/dev/null)"
+workspace_display() {
+	awk -F'|' -v ws="$1" '$1 == ws { print $2; exit }' <<<"$monitor_map"
+}
+
 app_icons() {
 	local sid="$1" app out=""
 	while IFS= read -r app; do
@@ -25,11 +32,13 @@ app_icons() {
 args=()
 for sid in $(seq 1 10); do
 	icons="$(app_icons "$sid")"
+	display="$(workspace_display "$sid")"
+	display_args=(display="${display:-0}")
 
 	# Only show workspaces with open windows, plus whichever one is focused
 	# (so you can always see where you are, even on an empty workspace).
 	if [[ -z "$icons" && "$sid" != "$focused" ]]; then
-		args+=(--set "space.$sid" drawing=off)
+		args+=(--set "space.$sid" drawing=off "${display_args[@]}")
 		continue
 	fi
 
@@ -39,9 +48,9 @@ for sid in $(seq 1 10); do
 		label_args=(label.drawing=off)
 	fi
 	if [[ "$sid" == "$focused" ]]; then
-		args+=(--set "space.$sid" drawing=on background.color="$ACCENT_COLOR" icon.color="$BG_DARK" label.color="$BG_DARK" "${label_args[@]}")
+		args+=(--set "space.$sid" drawing=on background.color="$ACCENT_COLOR" icon.color="$BG_DARK" label.color="$BG_DARK" "${display_args[@]}" "${label_args[@]}")
 	else
-		args+=(--set "space.$sid" drawing=on background.color="$ITEM_BG_COLOR" icon.color="$LABEL_COLOR" label.color="$LABEL_COLOR" "${label_args[@]}")
+		args+=(--set "space.$sid" drawing=on background.color="$ITEM_BG_COLOR" icon.color="$LABEL_COLOR" label.color="$LABEL_COLOR" "${display_args[@]}" "${label_args[@]}")
 	fi
 done
 
