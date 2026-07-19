@@ -4,6 +4,8 @@ Custom [SketchyBar](https://github.com/FelixKratz/SketchyBar) config, integrated
 [AeroSpace](../aerospace/aerospace.toml). Started minimal and grew widget by widget -
 this doc describes the setup as it stands, not the history of how it got there.
 
+Inspired by [Kiyoon Kim's dotfiles](https://github.com/kiyoon/dotfiles).
+
 **Left:** AeroSpace workspaces (only non-empty + the focused one are shown, each labeled
 with the app icons of its windows) · front app name, offset with a margin so its
 variable width doesn't shove the workspace items around.
