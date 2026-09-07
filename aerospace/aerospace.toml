@@ -301,5 +301,5 @@ run = 'move-node-to-workspace 8'
 [workspace-to-monitor-force-assignment]
 # 1 = 'main'
 # 4 = 'main'
-3 = 'secondary'
-8 = 'secondary'
+# 3 = 'secondary'
+# 8 = 'secondary'
