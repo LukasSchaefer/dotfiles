@@ -9,7 +9,7 @@ Inspired by [Kiyoon Kim's dotfiles](https://github.com/kiyoon/dotfiles).
 **Left:** AeroSpace workspaces (only non-empty + the focused one are shown, each labeled
 with the app icons of its windows) · front app name, offset with a margin so its
 variable width doesn't shove the workspace items around.
-**Right:** CPU · RAM · keyboard layout (US | DE | ZH, active one highlighted) · battery
+**Right:** CPU · RAM · keyboard layout (US | DE | DK, active one highlighted) · battery
 · system menu (opens Control Center) · clock.
 
 Multi-monitor aware: SketchyBar draws a bar on every connected display, but each
@@ -124,9 +124,17 @@ sketchybar/
   ends up to the *left* of previously-added right items. The on-screen order in
   `sketchybarrc` is therefore the reverse of the visual left-to-right order - see the
   comment above the right-side section before reordering anything there.
-- **Keyboard layout order is pinned** (US, DE, ZH) in `keyboard.sh` regardless of the
-  order macOS reports in `AppleEnabledInputSources`, which just tracks the order
-  layouts were added in System Settings.
+- **Keyboard layout is read from the Text Input Sources (TIS) API**, not from
+  `defaults read com.apple.HIToolbox`. That preference lies: removing an input method
+  in System Settings can leave its `Input Mode` record behind in
+  `AppleEnabledInputSources`, so a defaults-based reading keeps showing sources that
+  are gone (Chinese did exactly that). TIS is what the system's own input menu reads.
+- **Layout labels and order are mapped explicitly** at the top of `keyboard.sh`:
+  `SOURCE_CODES` (by input source ID) and `LANG_CODES` (by language tag) decide the
+  two-letter label - that's where Danish becomes `DK` rather than `DA` - and `ORDER`
+  pins the display order, since macOS reports sources in the order they were added in
+  System Settings. Unmapped sources fall back to their uppercased language tag and are
+  appended after the pinned ones.
 - **CPU polls every 5s, not more often**: `top -l 1 -n 0` costs ~300ms per call;
   everything else here is single-digit milliseconds and polls faster (keyboard every
   1s, RAM every 5s).

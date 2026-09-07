@@ -156,7 +156,7 @@ sketchybar --add item battery right \
 	script="$PLUGIN_DIR/battery.sh" \
 	--subscribe battery power_source_change system_woke forced
 
-# Keyboard layout: one compact block - a keyboard icon, then "US | DE | ZH"
+# Keyboard layout: one compact block - a keyboard icon, then "US | DE | DK"
 # style labels (kbd.1..kbd.4) separated by "|" dividers (kbd.sep1..sep3),
 # all sharing one background via a bracket instead of each item having its
 # own pill. plugins/keyboard.sh toggles which slots/separators are visible
